@@ -1215,4 +1215,181 @@ margin-bottom: 150px;
   padding-right: 130px;
 }
 
+
+.joinus{
+  text-align: center;
+  color: #0CA784;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size:40px;
+  margin-top:60px;
+  margin-bottom: 50px;
+  }
+
+  .careers-icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:60px;
+    margin-top:40px;
+  }
+
+  .careers-title{
+text-align: center;
+color: white;
+font-family: "Poppins", sans-serif;
+font-size:18px;
+font-weight:700;
+margin-top:30px;
+  }
+
+  .careers-sentence-2{
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+}
+
+.card-career-listing{
+  background-color: #0A0A0A;
+  border-radius: 3px;
+  margin-top:20px;
+  margin-bottom:20px;
+  padding:25px 25px 25px 25px;
+}
+
+.role{
+  color: white;
+  font-size:18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top:15px;
+  margin-left:10px;
+}
+
+
+.exp-header{
+  color: #ffffffa9;
+  font-size:14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.exp-tag{
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.careerarrow{
+  margin-top:20px;
+  margin-left:50px;
+}
+
+.line-spacer{
+  margin-top:130px;
+}
+
+.jd{
+  padding-left:150px;
+  padding-right:150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-icon-2{
+  float: left;
+  width:50px;
+  margin-top:80px;
+  margin-bottom:-40px;
+  margin-left:50px;
+  margin-right:-70px;
+}
+
+.jd-title{
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin-left:70px;
+  margin-top: 80px;
+  font-size: 32px;
+  font-weight:600;
+}
+
+.jd-subtitle{
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin-left:70px;
+  margin-top: 70px;
+  font-size: 24px;
+  font-weight:400;
+}
+
+.jd-list{
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin-left:60px;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 200;
+}
+
+.jd-sentence{
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin-left:70px;
+  font-size: 18px;
+  font-weight: 200;
+  padding-right:100px;
+}
+
+
+.careers-background{
+  background-color: #0A0A0A;
+  width: 100%;
+  margin-top:100px;
+}
+
+
+.career-sentence{
+  text-align: center;
+  color: white;
+  margin-top: 53px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom:30px;
+  margin-top: 85px;
+}
+
 /*end*/
+
+
+/**404**/
+
+.notfoundtypo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:500px;
+  margin-top:150px;
+}
+
+.not-found{
+  text-align: center;
+  font-size: 36px;
+  color: #26A5C6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 70px;
+  margin-bottom:250px;
+
+}
+
+
+/**css **/

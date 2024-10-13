@@ -8,6 +8,8 @@ import Project from "./components/pages/project";
 import Vendors from "./components/pages/vendors";
 import Contact from "./components/pages/contact";
 import Careers from "./components/pages/careers";
+import Jobdescription from "./components/pages/jobdescription";
+import Notfound from "./components/pages/notfound";
 
 
 
@@ -23,6 +25,8 @@ function App() {
   <Route path="/vendors" element={<Vendors/>}/>
   <Route path="/contact" element={<Contact/>}/>
   <Route path="/careers" element={<Careers/>}/>
+  <Route path="/jobdescription" element={<Jobdescription/>}/>
+  <Route path="/notfound" element={<Notfound/>}/>
 
 
 </Routes>
