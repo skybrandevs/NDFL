@@ -10,6 +10,8 @@ import Contact from "./components/pages/contact";
 import Careers from "./components/pages/careers";
 import Jobdescription from "./components/pages/jobdescription";
 import Notfound from "./components/pages/notfound";
+import Blog from "./components/pages/blog";
+import Postdetials from "./components/pages/postdetials";
 
 
 
@@ -27,6 +29,8 @@ function App() {
   <Route path="/careers" element={<Careers/>}/>
   <Route path="/jobdescription" element={<Jobdescription/>}/>
   <Route path="/notfound" element={<Notfound/>}/>
+  <Route path="/blog" element={<Blog/>}/>
+  <Route path="/postdetials" element={<Postdetials/>}/>
 
 
 </Routes>
