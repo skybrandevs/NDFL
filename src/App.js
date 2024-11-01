@@ -12,7 +12,12 @@ import Jobdescription from "./components/pages/jobdescription";
 import Notfound from "./components/pages/notfound";
 import Blog from "./components/pages/blog";
 import Postdetials from "./components/pages/postdetials";
-
+import Home from "././components/admin/pages/home";
+import Aboutpanel from "././components/admin/pages/aboutpanel";
+import Portfoliopanel from "././components/admin/pages/portfoliopanel";
+import Portfoliodetailspanel from "././components/admin/pages/portfoliodetailspanel";
+import Vendorspanel from "././components/admin/pages/vendorspanel";
+import Vendorsdetailspanel from "././components/admin/pages/vendorsdetailspanel";
 
 
 function App() {
@@ -31,6 +36,12 @@ function App() {
   <Route path="/notfound" element={<Notfound/>}/>
   <Route path="/blog" element={<Blog/>}/>
   <Route path="/postdetials" element={<Postdetials/>}/>
+  <Route path="/home" element={<Home/>}/>
+  <Route path="/aboutpanel" element={<Aboutpanel/>}/>
+  <Route path="/portfoliopanel" element={<Portfoliopanel/>}/>
+  <Route path="/portfoliodetailspanel" element={<Portfoliodetailspanel/>}/>
+  <Route path="/vendorspanel" element={<Vendorspanel/>}/>
+  <Route path="/vendorsdetailspanel" element={<Vendorsdetailspanel/>}/>
 
 
 </Routes>

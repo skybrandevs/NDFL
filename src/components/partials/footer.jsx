@@ -6,6 +6,7 @@ import x from '../../images/x.svg';
 import p from '../../images/p.svg';
 import be from '../../images/be.svg';
 import youtube from '../../images/youtube.svg';
+import lin from '../../images/lin.svg';
 
 
 const footer = () => {
@@ -45,6 +46,7 @@ const footer = () => {
     <div className='row'>
         <div className='col-lg-6'>
 <h6 className='footer-title-below'>Follow Us</h6>
+<a href="https://www.linkedin.com/company/neilzdesign/" target='_blank' rel='noreferrer'><img src={lin} className='img-fluid io' alt='lin'/></a>
 <a href="https://www.instagram.com/neilzdesign/" target='_blank' rel='noreferrer'><img src={ig} className='img-fluid io' alt='ig'/></a>
 <a href="https://www.facebook.com/neilzdesign" target='_blank' rel='noreferrer'><img src={fb} className='img-fluid io' alt='fb'/></a>
 <a href="https://x.com/home" target='_blank' rel='noreferrer'><img src={x} className='img-fluid io' alt='x'/></a>

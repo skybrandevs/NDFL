@@ -10,7 +10,6 @@ import kosi from '../../images/kosi.svg';
 import kiara from '../../images/kiara.svg';
 import lekan from '../../images/lekan.svg';
 
-
 const about = () => {
   return (
     <div>
