@@ -1,52 +1,48 @@
 import React from 'react'
 import Nav from '../partials/nav';
 import backarrowadmin from '../../../images/backarrowadmin.svg';
-
 import pdf from '../../../images/pdf.svg';
 import { Link } from 'react-router-dom';
 
-const vendorsdetailspanel = () => {
+const candidate = () => {
   return (
     <div>
-
-
-<div className='row'>
+        <div className='row'>
     <div className='col-lg-2'>
 <Nav></Nav>
     </div>
 
     <div className='col-lg-10 bacc'>
-<Link to="/vendorspanel" className='link'>
+<Link to="/careerspanel" className='link'>
 <img src={backarrowadmin} className='img-fluid backarrowadmin' alt='backarrowadmin'/>
 </Link>
 
  <div className='card-admin-h'>
-<h3 className='admin-header-title'>Ajala Woods</h3>
+<h3 className='admin-header-title'>John Doe</h3>
 
 <div className='row'>
     <div className='col-lg-3'>
-    <p className='admin-sub-header-title'>Sector</p>
+    <p className='admin-sub-header-title'>Full Name</p>
     <input type='text' placeholder='lorem ipsum' className='text-field-testimonials'/>
     </div>
-    <div className='col-lg-3'>
-    <p className='admin-sub-header-title'>Email</p>
-    <input type='email' placeholder='Lorem Ipsum' className='text-field-testimonials'/>
-    </div>
+   
     <div className='col-lg-3'>
     <p className='admin-sub-header-title'>Phone Number</p>
     <input type='number' placeholder='lorem ipsum' className='text-field-testimonials'/>
     </div>
+
+  
 </div>
 
 
 <div className='row'>
     <div className='col-lg-12'>
-    <p className='admin-sub-header-title'>Address</p>
-    <input type='address' placeholder='Lorem Ipsum' className='text-field-testimonials'/>
+    <p className='admin-sub-header-title'>Cover Letter</p>
+    <textarea type='text' placeholder='Lorem Ipsum' className='text-field-blog'/>
     </div>
 
     <div className='col-lg-12'>
-    <p className='admin-sub-header-title'>CAC Document</p>
+    <p className='admin-sub-header-title'>CV</p>
     <img src={pdf} className='img-fluid' alt='document'/>
     <p>Open</p>
     </div>
@@ -158,11 +154,8 @@ const vendorsdetailspanel = () => {
 
 
     </div>
-     </div>
-
-
-    
+    </div>
   )
 }
 
-export default vendorsdetailspanel
+export default candidate

@@ -41,7 +41,7 @@ const blog = () => {
 <div className='row'>
     <div className='col-lg-4'>
         <div className='blog-card-ndfl'>
-            <Link to="/postdetials" className=''>
+            <Link to="/postdetials" className='line-removal'>
         <img src={blogpicture} className='img-fluid blog-img-component' alt='blog=hero'/>
         <span className='tag-blog-main-component'>Interior Design</span>
         <p className='title-blog-post-main-component'>Interior Design vs Interior Architecture - the difference in roles and how they collaborate</p>

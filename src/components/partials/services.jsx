@@ -47,7 +47,7 @@ const services = () => {
     </div>
 
 
-<div className='row'>
+<div className='row baked-twist'>
 
 <div className='col-lg-5'>
 <div className='blue'>
@@ -81,7 +81,7 @@ const services = () => {
 
 
 
-<div className='row'>
+<div className='row baked-twist'>
 
 <div className='col-lg-5'>
        <div className='orange'>
@@ -119,7 +119,7 @@ const services = () => {
 
 
 
-<div className='row'>
+<div className='row baked-twist'>
 
 <div className='col-lg-5'>
        <div className='pink'>

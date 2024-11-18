@@ -18,6 +18,13 @@ import Portfoliopanel from "././components/admin/pages/portfoliopanel";
 import Portfoliodetailspanel from "././components/admin/pages/portfoliodetailspanel";
 import Vendorspanel from "././components/admin/pages/vendorspanel";
 import Vendorsdetailspanel from "././components/admin/pages/vendorsdetailspanel";
+import Blogpanel from "././components/admin/pages/blogpanel";
+import Blogpostpanel from "././components/admin/pages/blogpostpanel";
+import Careerspanel from "././components/admin/pages/careerspanel";
+import Newcareer from "././components/admin/pages/newcareer";
+import Candidate from "././components/admin/pages/candidate";
+import Messagepanel from "././components/admin/pages/messagepanel";
+import Preview from "././components/admin/pages/preview";
 
 
 function App() {
@@ -42,6 +49,13 @@ function App() {
   <Route path="/portfoliodetailspanel" element={<Portfoliodetailspanel/>}/>
   <Route path="/vendorspanel" element={<Vendorspanel/>}/>
   <Route path="/vendorsdetailspanel" element={<Vendorsdetailspanel/>}/>
+  <Route path="/blogpanel" element={<Blogpanel/>}/>
+  <Route path="/blogpostpanel" element={<Blogpostpanel/>}/>
+  <Route path="/careerspanel" element={<Careerspanel/>}/>
+  <Route path="/newcareer" element={<Newcareer/>}/>
+  <Route path="/candidate" element={<Candidate/>}/>
+  <Route path="/messagepanel" element={<Messagepanel/>}/>
+  <Route path="/preview" element={<Preview/>}/>
 
 
 </Routes>

@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../images/logo.svg';
+import icontoggle from '../../images/icontoggle.svg';
 import arrow from '../../images/arrow.svg';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ const navbar = () => {
     <img src={logo} className=" img-fluid navbar-brand" alt='logo'/>
     </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
+      <span className="navbar-toggler-icon"><img src={icontoggle} className='img-fluid' alt='toggle'/></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto adjuster">

@@ -22,10 +22,13 @@ const statement = () => {
         </div>
 
 <div className='strip-background'>
+
+
  
  <img src={stripe} className='img-fluid strip scroll' alt='stripe'/>  
+ </div>
  
-</div>
+
 
     </div>
   )
