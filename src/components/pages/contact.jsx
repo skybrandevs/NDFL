@@ -42,7 +42,7 @@ const contact = () => {
 </div>
 
 <label for="exampleInputEmail1" class="form-label">Leave a message for us</label>
-<input type="message" class="form-control message" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+<textarea type="message" class="form-control message" id="exampleInputEmail1" aria-describedby="emailHelp"/>
 
 <button className='btn-contact-submit'>Submit</button>
 

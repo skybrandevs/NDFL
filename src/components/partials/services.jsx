@@ -16,6 +16,7 @@ import creo from '../../images/creo.png';
 import cala from '../../images/cala.png';
 import tbo from '../../images/tbo.png';
 import powergas from '../../images/powergas.png';
+import { Link } from 'react-router-dom';
 
 
 const services = () => {
@@ -41,7 +42,9 @@ const services = () => {
        <div className='pink'>
 <h3 className='h33'>Architectural Design</h3>
 <p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
+<Link to="/about" className='line-removal'>  
 <button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
+</Link>
         </div>     
             </div>
     </div>
@@ -52,8 +55,10 @@ const services = () => {
 <div className='col-lg-5'>
 <div className='blue'>
 <h3 className='h33'>Interior Design</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
+<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p> 
+<Link to="/about" className='line-removal'>   
 <button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
+</Link>
         </div> 
 </div>
 
@@ -73,8 +78,10 @@ const services = () => {
         <div className='col-lg-5'>
        <div className='green'>
 <h3 className='h33'>Consulting</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
+<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p> 
+<Link to="/about" className='line-removal'>   
 <button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
+</Link>
         </div>     
             </div>
 </div>
@@ -86,8 +93,10 @@ const services = () => {
 <div className='col-lg-5'>
        <div className='orange'>
 <h3 className='h33'>Facility Management</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
-<button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
+<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p> 
+<Link to="/about" className='line-removal'>   
+<button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>  
+</Link>   
         </div>     
             </div>
 
@@ -109,7 +118,9 @@ const services = () => {
 <div className='black'>
 <h3 className='h33'>E-design</h3>
 <p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
-<button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
+<Link to="/about" className='line-removal'>  
+<button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>   
+</Link>  
         </div>  
 
 
@@ -125,7 +136,9 @@ const services = () => {
        <div className='pink'>
 <h3 className='h33'>Office Space Listings</h3>
 <p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
+<Link to="/about" className='line-removal'>  
 <button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
+</Link>
         </div>     
             </div>
 

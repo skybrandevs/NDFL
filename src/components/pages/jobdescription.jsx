@@ -60,7 +60,7 @@ const jobdescription = () => {
 </div>
 
 <label for="exampleInputEmail1" class="form-label">Cover Letter</label>
-<input type="message" class="form-control message" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+<textarea type="message" class="form-control message" id="exampleInputEmail1" aria-describedby="emailHelp"/>
 
 <label for="formFile" class="form-label">CV</label>
 <input class="form-control element" type="file" id="formFile"/>

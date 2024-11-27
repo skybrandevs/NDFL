@@ -1949,6 +1949,11 @@ font-size:14px;
 
   }
 
+  textarea{
+    background-color: transparent !important;
+    color:white !important;
+  }
+
   .push-admin{
     margin-top:50px;
   }
@@ -2029,6 +2034,43 @@ tr{
 /*** mobile media query **/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+
+  .mansory-img{
+   padding: 20px 20px 20px 20px !important;
+  }
+  
+  
+  .highlight:hover .mansory-img {
+    opacity: 0.28;
+  }
+  
+  
+  
+  .middle {
+    transition: .5s ease;
+    text-align:left;
+    
+  }
+  
+  .text {
+    line-height:35px;
+    margin-top: -180px;
+    padding-left: 40px;
+    padding-right:20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  color: white;
+  font-size: 26px;
+  }
+  
+  .text2{
+    padding-left: 40px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    margin-top:10px;
+  }
 
 
 .navbar-brand{

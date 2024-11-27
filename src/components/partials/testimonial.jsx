@@ -4,6 +4,7 @@ import arrowleft from '../../images/arrowleft.svg';
 import arrowright from '../../images/arrowright.svg';
 import people from '../../images/people.svg';
 import quote from '../../images/quote.svg';
+import { Link } from 'react-router-dom';
 
 const testimonial = () => {
   return (
@@ -85,7 +86,9 @@ const testimonial = () => {
 <div className='container'>
 <div className='row'>
 <h3 className="lets-talk">Let’s talk about your project</h3>
+<Link to="/contact" className='line-removal'>  
 <button className='lets-talk-button'>Contact Us</button>
+</Link>
 </div>
 </div>
 </div>
