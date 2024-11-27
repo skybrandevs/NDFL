@@ -14,7 +14,7 @@ const video = () => {
         <div className='col-lg-6 mrg-top'>
             
 <div className='adjuster-gen'>
-    <h3 className='number'>11+</h3>
+    <h3 className='number plus'>11</h3>
     <span className='numbers-sentence'>years of experience</span>
 
 </div>

@@ -34,11 +34,19 @@ const mansoryportfolio = () => {
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active trans" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
     <div className='row'>
-        <div className='col-lg-4  col-md-6'>
+        <div className='col-lg-4  col-md-6 highlight'>
 <img src={mansory1} className='img-fluid mansory-img' alt='mansory'/>
+<div class="middle">
+    <div class="text">Churchgate Reception</div>
+    <p class="text2">Lagos,2023</p>
+  </div>
         </div>
-        <div className=' col-lg-4 col-md-6'>
-        <img src={mansory2} className='img-fluid mansory-img' alt='mansory'/>          
+        <div className=' col-lg-4 col-md-6 highlight'>
+        <img src={mansory2} className='img-fluid mansory-img' alt='mansory'/>   
+        <div class="middle">
+    <div class="text">Betaglass Headquater</div>
+    <p class="text2">Abuja,2021</p>
+  </div>       
             </div>
             <div className='col-lg-4  col-md-6'>
             <img src={mansory3} className='img-fluid mansory-img' alt='mansory'/>  
@@ -68,9 +76,13 @@ const mansoryportfolio = () => {
   </div>
   <div class="tab-pane fade trans" id="pills-commercial" role="tabpanel" aria-labelledby="pills-commercial-tab" tabindex="0">
   <div className='row'>
-        <div className='col-lg-4 col-md-6'>
-   <Link to="/project">       
+        <div className='col-lg-4 col-md-6 highlight'>
+   <Link to="/project" className='line-removal'>       
 <img src={mansory1} className='img-fluid mansory-img' alt='mansory'/>
+<div class="middle">
+    <div class="text">Betaglass Headquater</div>
+    <p class="text2">Abuja,2021</p>
+  </div>
 </Link>
 
         </div>

@@ -8,10 +8,19 @@ body{
   background-size:cover;
   background-position-x:center;
   background-position-y:top;
-
-  
-
 }
+
+.plus{
+  position: relative;
+}
+
+.plus::after{
+content: "+";
+position: absolute;
+top: 0;
+left: 35px;
+}
+
 
 .box{
   background-color: #0A0A0A;
@@ -224,6 +233,7 @@ background-size: cover;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 45px;
+  
 }
 
 .numbers-sentence{
@@ -1002,7 +1012,44 @@ border-bottom: 2px solid #FF4239;
 
 .mansory-img{
   margin-bottom:25px;
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
+
+
+.highlight:hover .mansory-img {
+  opacity: 0.28;
+}
+
+
+
+.middle {
+  transition: .5s ease;
+  text-align:left;
+  
+}
+
+.text {
+  line-height:35px;
+  margin-top: -160px;
+  padding-left: 25px;
+  padding-right:30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+color: white;
+font-size: 26px;
+}
+
+.text2{
+  padding-left: 25px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  margin-top:10px;
+}
+
 
 
 .back-icon{
