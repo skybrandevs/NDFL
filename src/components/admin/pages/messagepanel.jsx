@@ -16,7 +16,7 @@ const messagepanel = () => {
    <div className='card-admin-h'>
    <h3 className='admin-header-title'>Message</h3>
 
-   <table class="table">
+   <table className="table">
   <thead>
     <tr>
       

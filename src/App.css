@@ -12103,3 +12103,55 @@ margin-left:0px;
 /** end **/
 
 
+/* pagination */
+
+.pagination {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: #fff;
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.pagination li {
+  margin: 0 5px;
+  font-size: 0.5rem;
+}
+
+.page-item {
+  text-decoration: none;
+  padding: 5px 10px;
+  font-family: jost;
+  font-size: 1.2rem !important;
+  font-weight: 450;
+  cursor: pointer;
+  color: #060606;
+}
+
+.next {
+  font-size: 1rem;
+}
+
+/* .pagination li a:hover {
+  background-color: #007bff;
+  color: white;
+} */
+
+
+.pagination a {
+  color: #060606 !important;
+}
+
+
+.pagination .active-page a {
+  color: var(--primary-color) !important;
+  cursor:default;
+}
+
+
+.disabled {
+  color: gray;
+  cursor: not-allowed;
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import './App.css';
-import {Route, BrowserRouter as Router, Routes} from 'react-router-dom';
+import "./App.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Landing from "./components/pages/landing";
 import About from "./components/pages/about";
 import Portfolio from "./components/pages/portfolio";
@@ -25,42 +25,46 @@ import Newcareer from "././components/admin/pages/newcareer";
 import Candidate from "././components/admin/pages/candidate";
 import Messagepanel from "././components/admin/pages/messagepanel";
 import Preview from "././components/admin/pages/preview";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
-
   return (
-<Router>
-<Routes>
-  <Route path="/" element={<Landing/>}/>
-  <Route path="/about" element={<About/>}/>
-  <Route path="/portfolio" element={<Portfolio/>}/>
-  <Route path="/project" element={<Project/>}/>
-  <Route path="/vendors" element={<Vendors/>}/>
-  <Route path="/contact" element={<Contact/>}/>
-  <Route path="/careers" element={<Careers/>}/>
-  <Route path="/jobdescription" element={<Jobdescription/>}/>
-  <Route path="/notfound" element={<Notfound/>}/>
-  <Route path="/blog" element={<Blog/>}/>
-  <Route path="/postdetials" element={<Postdetials/>}/>
-  <Route path="/home" element={<Home/>}/>
-  <Route path="/aboutpanel" element={<Aboutpanel/>}/>
-  <Route path="/portfoliopanel" element={<Portfoliopanel/>}/>
-  <Route path="/portfoliodetailspanel" element={<Portfoliodetailspanel/>}/>
-  <Route path="/vendorspanel" element={<Vendorspanel/>}/>
-  <Route path="/vendorsdetailspanel" element={<Vendorsdetailspanel/>}/>
-  <Route path="/blogpanel" element={<Blogpanel/>}/>
-  <Route path="/blogpostpanel" element={<Blogpostpanel/>}/>
-  <Route path="/careerspanel" element={<Careerspanel/>}/>
-  <Route path="/newcareer" element={<Newcareer/>}/>
-  <Route path="/candidate" element={<Candidate/>}/>
-  <Route path="/messagepanel" element={<Messagepanel/>}/>
-  <Route path="/preview" element={<Preview/>}/>
-
-
-</Routes>
-</Router>
-
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/vendors" element={<Vendors />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/jobdescription" element={<Jobdescription />} />
+        <Route path="/notfound" element={<Notfound />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/postdetials" element={<Postdetials />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/aboutpanel" element={<Aboutpanel />} />
+        <Route path="/portfoliopanel" element={<Portfoliopanel />} />
+        <Route
+          path="/portfoliodetailspanel"
+          element={<Portfoliodetailspanel />}
+        />
+        <Route path="/vendorspanel" element={<Vendorspanel />} />
+        <Route path="/vendorsdetailspanel/:id" element={<Vendorsdetailspanel />} />
+        <Route path="/blogpanel" element={<Blogpanel />} />
+        <Route path="/blogpostpanel" element={<Blogpostpanel />} />
+        <Route path="/blogpostpanel/:blogId" element={<Blogpostpanel />} />
+        <Route path="/careerspanel" element={<Careerspanel />} />
+        <Route path="/newcareer" element={<Newcareer />} />
+        <Route path="/newcareer/:careerId" element={<Newcareer />} />
+        <Route path="/candidate" element={<Candidate />} />
+        <Route path="/messagepanel" element={<Messagepanel />} />
+        <Route path="/preview" element={<Preview />} />
+      </Routes>
+      <ToastContainer position="top-center" />
+    </Router>
   );
 }
 
