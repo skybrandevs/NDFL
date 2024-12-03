@@ -10,8 +10,8 @@ import { toast } from "react-toastify";
 const Vendorspanel = () => {
   const [allVendors, setAllVendors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false); 
-  const [vendorToDelete, setVendorToDelete] = useState(null); 
+  const [showModal, setShowModal] = useState(false);
+  const [vendorToDelete, setVendorToDelete] = useState(null);
 
   const fetchVendors = async () => {
     setIsLoading(true);
@@ -35,10 +35,10 @@ const Vendorspanel = () => {
   const handleDeleteConfirm = async () => {
     // Call your delete function here with the vendorIdToDelete
     try {
-      const response = await deleteSingleVendors(vendorToDelete?.id)
+      const response = await deleteSingleVendors(vendorToDelete?.id);
       setShowModal(false);
-      fetchVendors()
-      toast.success("Vendor Successfully Deleted")
+      fetchVendors();
+      toast.success("Vendor Successfully Deleted");
     } catch (error) {
       console.log("Error deleting vendor:", error);
       toast.error("Failed to delete vendor!");
@@ -54,11 +54,11 @@ const Vendorspanel = () => {
   }, []);
   return (
     <div>
-     <ConfirmDeleteModal
+      <ConfirmDeleteModal
         show={showModal}
         onClose={handleDeleteCancel}
         onConfirm={handleDeleteConfirm}
-        vendorName={setVendorToDelete?.name || "this vendor"}
+        vendorName={vendorToDelete?.company_name || "this vendor"}
       />
       <div className="row">
         <div className="col-lg-2">
@@ -68,57 +68,67 @@ const Vendorspanel = () => {
         <div className="col-lg-10 bacc">
           <div className="card-admin-h">
             <h3 className="admin-header-title">List of Vendors</h3>
-
-            <div className="row">
-              {allVendors?.map((vendor, item) => {
-                return (
-                  <div className="col-lg-6" key={item}>
-                    <div className="fancy-card-admin">
-                      <div className="row">
-                        <div className="col-lg-6">
-                          {vendor?.portfolio_images?.[0]?.image_path ? (
-                            <img
-                              src={vendor.portfolio_images[0].image_path}
-                              //   className="img-fluid rounded"
-                              alt={vendor.name || "Vendor Image"}
-                              style={{
-                                width: "100px",
-                                height: "100px",
-                                objectFit: "contain",
-                              }}
-                            />
-                          ) : (
-                            <div
-                              className="d-flex justify-content-center align-items-center border border-secondary rounded"
-                              style={{
-                                width: "100px",
-                                height: "100px",
-                                backgroundColor: "#f8f9fa",
-                              }}
+            {isLoading ? (
+              <p>Loading list of vendors...</p>
+            ) : (
+              <div className="row">
+                {allVendors?.map((vendor, item) => {
+                  return (
+                    <div className="col-lg-6" key={item}>
+                      <div className="fancy-card-admin">
+                        <div className="row">
+                          <div className="col-lg-6">
+                            {vendor?.portfolio_images?.[0]?.image_path ? (
+                              <img
+                                src={vendor.portfolio_images[0].image_path}
+                                //   className="img-fluid rounded"
+                                alt={vendor.name || "Vendor Image"}
+                                style={{
+                                  width: "100px",
+                                  height: "100px",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            ) : (
+                              <div
+                                className="d-flex justify-content-center align-items-center border border-secondary rounded"
+                                style={{
+                                  width: "100px",
+                                  height: "100px",
+                                  backgroundColor: "#f8f9fa",
+                                }}
+                              >
+                                <p className="text-muted mb-0">No Image</p>
+                              </div>
+                            )}
+                          </div>
+                          <div className="col-lg-6">
+                            <h3 className="vendors-title">
+                              {vendor.company_name}
+                            </h3>
+                            {/* <span className="vendors-work">Capentry</span> */}
+                            <div className="push-admin"></div>
+                            <Link
+                              to={`/vendorsdetailspanel/${vendor.id}`}
+                              className="link"
                             >
-                              <p className="text-muted mb-0">No Image</p>
-                            </div>
-                          )}
-                        </div>
-                        <div className="col-lg-6">
-                          <h3 className="vendors-title">Ajala Woods</h3>
-                          <span className="vendors-work">Capentry</span>
-                          <div className="push-admin"></div>
-                          <Link
-                            to={`/vendorsdetailspanel/${vendor.id}`}
-                            className="link"
-                          >
-                            <span className="edit-vendors">View</span>
-                          </Link>
-                          <span className="delete-vendors" onClick={() => handleDeleteClick(vendor)}>Delete</span>
+                              <span className="edit-vendors">View</span>
+                            </Link>
+                            <span
+                              className="delete-vendors"
+                              onClick={() => handleDeleteClick(vendor)}
+                              style={{ cursor: "pointer" }}
+                            >
+                              Delete
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-
+                  );
+                })}
+              </div>
+            )}
             <div className="row">
               <div className="col-lg-11 add-mr-top">
                 <Link to="/vendors" className="link">
