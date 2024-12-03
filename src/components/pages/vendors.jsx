@@ -9,6 +9,7 @@ import loads from "../../images/loads.gif";
 
 const Vendors = () => {
   const [formData, setFormData] = useState({
+    company_name: "",
     sector: "",
     email: "",
     phone: "",
@@ -56,7 +57,8 @@ const Vendors = () => {
       !formData.email ||
       !formData.phone ||
       !formData.address ||
-      !formData.sector
+      !formData.sector ||
+      !formData.company_name
     ) {
       toast.error("All text fields must be filled!");
       return;
@@ -69,6 +71,7 @@ const Vendors = () => {
       const form = new FormData();
 
       // Append other form data fields
+      form.append("company_name", formData.company_name);
       form.append("sector", formData.sector);
       form.append("email", formData.email);
       form.append("phone", formData.phone);
@@ -88,6 +91,19 @@ const Vendors = () => {
       // If the response indicates success, show a success toast
       if (response.message) {
         toast.success("Form submitted successfully!");
+        setFormData({
+          company_name: "",
+          sector: "",
+          email: "",
+          phone: "",
+          address: "",
+        });
+        setDocument(null);
+        setPortfolioImages(null);
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       }
     } catch (error) {
       setIsLoading(false);
@@ -101,8 +117,6 @@ const Vendors = () => {
         // General error fallback
         toast.error("Failed to submit form.");
       }
-
-      console.error("Error submitting form:", error);
     }
   };
 
@@ -140,10 +154,10 @@ const Vendors = () => {
                   <input
                     type="text"
                     className="form-control"
-                    value={formData.companyName}
-                    name="companyName"
-                    id="companyName"
-                    aria-describedby="companyName"
+                    value={formData.company_name}
+                    name="company_name"
+                    id="company_name"
+                    aria-describedby="company_name"
                     onChange={handleInputChange}
                   />
                 </div>
@@ -237,7 +251,12 @@ const Vendors = () => {
               <button className="btn-contact-submit">
                 {isLoading ? (
                   <>
-                <img src={loads} className="img-fluid gif-loads" alt="loads"/>  Loading{" "}
+                    <img
+                      src={loads}
+                      className="img-fluid gif-loads"
+                      alt="loads"
+                    />{" "}
+                    Loading{" "}
                   </>
                 ) : (
                   "Submit"
