@@ -25,8 +25,8 @@ const footer = () => {
             <div className='row'>
                 <div className='col-lg-6'>
 <h6 className='footer-title'>Address</h6>
-<p className='footer-subject-1'>318 Ikorodu-Ososun Rd, Anthony,Ikorodu 105102, Lagos</p>
-<p className='footer-subject-2'>5 The Mall, London,England,United Kingdom</p>
+<p className='footer-subject-1'>318 Ikorodu-Ososun Rd, Anthony, Ikorodu 105102, Lagos</p>
+<p className='footer-subject-2'>5 The Mall, London, England, United Kingdom</p>
                 </div>
 
                 <div className='col-lg-6'>

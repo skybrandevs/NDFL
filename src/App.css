@@ -2,6 +2,10 @@ body{
   background-color:black;
 }
 
+.gif-loads{
+  width:20px;
+}
+
 .bac-ndfl{
   background-image:url("./images/svgback.png");
   background-repeat: no-repeat;
@@ -984,7 +988,7 @@ margin-right:15px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding:20px 30px 0px 30px;
+  padding:1px 30px 1px 30px;
   margin-top:50px;
   margin-bottom: 80px;
 }

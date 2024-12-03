@@ -5,6 +5,7 @@ import axios from "axios";
 import { Loader, LucideLoaderPinwheel } from "lucide-react";
 import { toast } from "react-toastify";
 import { createVendor } from "../../api/vendor";
+import loads from "../../images/loads.gif";
 
 const Vendors = () => {
   const [formData, setFormData] = useState({
@@ -236,7 +237,7 @@ const Vendors = () => {
               <button className="btn-contact-submit">
                 {isLoading ? (
                   <>
-                    <LucideLoaderPinwheel /> Loading{" "}
+                <img src={loads} className="img-fluid gif-loads" alt="loads"/>  Loading{" "}
                   </>
                 ) : (
                   "Submit"
