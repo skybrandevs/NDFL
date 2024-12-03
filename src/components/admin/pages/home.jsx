@@ -50,7 +50,7 @@ const home = () => {
         </div>
     </div>
 
-    
+    <button className='admin-save-3'>Save</button> 
 
  </div>
  </div>  
@@ -74,10 +74,9 @@ const home = () => {
             <p className='label-title-2'>Drag and drop here or </p>
             <button type='file' className='input-file'>Browse</button>
            </div>
-    </div>
-   
-
+</div>
  </div>
+ <button className='admin-save-3'>Save</button>  
  </div> 
 
 
@@ -108,6 +107,7 @@ const home = () => {
 </div>
 
 </div>
+<button className='admin-save-3'>Save</button>  
 </div> 
 
 
@@ -257,6 +257,7 @@ const home = () => {
     
 
  </div>
+ <button className='admin-save-3'>Save</button>  
  </div>  
 
 
@@ -304,8 +305,9 @@ const home = () => {
 
 </div>
     </div>
+    <button className='admin-save-3'>Save</button>
 </div> 
-<button className='admin-save'>Save</button>
+
 </div>
 
 

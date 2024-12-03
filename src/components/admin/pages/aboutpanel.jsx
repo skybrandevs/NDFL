@@ -12,6 +12,7 @@ const aboutpanel = () => {
 <Nav></Nav>
     </div>
     <div className='col-lg-10 bacc'>
+
     <div className='card-admin-h'>
     <h3 className='admin-header-title'>Section 1</h3>
     <p className='admin-sub-header-title'>Images</p>
@@ -23,11 +24,17 @@ const aboutpanel = () => {
   <p className='label-title'>JPG, PNG or WebP. Less than 10MB</p>
   <p className='label-title-2'>Drag and drop here or </p>
   <button type='file' className='input-file'>Browse</button>
- </div>
+</div>
+<button className='admin-save-2'>Save</button>
 </div>
 
 </div>
-        </div>
+
+  </div>
+ 
+ 
+
+
 
         <div className='card-admin-h'>
         <h3 className='admin-header-title'>Our team</h3>
@@ -95,7 +102,7 @@ const aboutpanel = () => {
   </div>
 </div>
           </div>
-
+          <button className='admin-save'>Save</button>
     </div>
     </div>
 

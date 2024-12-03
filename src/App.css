@@ -1,9 +1,68 @@
+/**modal css admin **/
+
+.modal-content{
+  background-color: #060606e1 !important;
+  border:transparent !important;
+}
+.modal-header, .modal-footer{
+  border: transparent !important;
+}
+
+.modal-title{
+  color:white;
+  font-family: "Poppins", sans-serif;
+  font-size:16px;
+}
+
+.btn-close{
+display: none !important;
+}
+
+.modal-body{
+  color:white;
+  font-family: "Poppins", sans-serif;
+  font-size:14px; 
+}
+
+.btn{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px; 
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+/**end**/
+
+
 body{
   background-color:black;
 }
 
 .gif-loads{
   width:20px;
+}
+
+.gif-loads-pager{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:20px;
+  margin-top:50px;
+}
+
+.vendors-img-api{
+  border-radius:15px;
+  width:100px !important;
+  height:100px !important;
+  object-fit: cover !important;
+}
+
+.no-img-api{
+  border-radius:15px;
+  width:100px !important;
+  height:100px !important;
+  object-fit: cover !important;
 }
 
 .bac-ndfl{
@@ -1764,6 +1823,17 @@ margin-right: auto;
   color: black !important;  
 }
 
+.text-special{
+  width: 100% !important;
+  padding-right:340px !important; 
+}
+
+.pp{
+  margin-left: 120px;
+}
+
+
+
 .text-field-quote{
   border: 0.5px solid #A7A7A7;
   width: 100%;
@@ -1786,6 +1856,33 @@ margin-right: auto;
   border: transparent;
   border-radius: 8px;
 }
+
+.admin-save-2{
+  margin-top:15px;
+  width:95%;
+  background-color: #26A5C6;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 13px 10px 13px 10px;
+  border: transparent;
+  border-radius: 8px;
+}
+
+.admin-save-3{
+  margin-top:15px;
+  width:23%;
+  background-color: #26A5C6;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 13px 10px 13px 10px;
+  border: transparent;
+  border-radius: 8px;
+}
+
+
+
 
 
 .card-upload-about{
@@ -1916,19 +2013,19 @@ font-size:14px;
 }
 
 .vendors-title{
-  margin-left: -50px;
-  margin-top:10px;
+  margin-left: -130px;
+  margin-top:12px;
   font-family: "Poppins", sans-serif;
   color: #000000;
   font-weight:500;
-  font-size: 19px;
+  font-size: 16px;
   text-transform:uppercase;
-  margin-bottom:-1px;
+  margin-bottom:2px;
 }
 
 
 .vendors-work{
-  margin-left: -50px;
+  margin-left: -130px;
   font-family: "Poppins", sans-serif;
   color: #000000;
   font-size:13px;
@@ -1938,7 +2035,7 @@ font-size:14px;
 
 .edit-vendors{
   color: #26A5C6;
-  margin-left:130px;
+  margin-left:120px;
   font-size:14px;
   }
 
@@ -1959,18 +2056,19 @@ font-size:14px;
   }
 
   .push-admin{
-    margin-top:50px;
+    margin-top:20px;
   }
 
 
   .blog-title{
-    margin-left: -50px;
+    margin-left: -130px;
     margin-top:10px;
     font-family: "Poppins", sans-serif;
     color: #000000;
     font-weight:500;
-    font-size: 19px;
+    font-size: 18px;
     margin-bottom:-1px;
+    line-height:25px;
   }
 
   .text-field-blog{

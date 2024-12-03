@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "../../components/partials/navbar";
 import Footer from "../../components/partials/footer";
 import axios from "axios";
-import { Loader, LucideLoaderPinwheel } from "lucide-react";
 import { toast } from "react-toastify";
 import { createVendor } from "../../api/vendor";
 import loads from "../../images/loads.gif";
@@ -274,15 +273,4 @@ const Vendors = () => {
 };
 
 export default Vendors;
-// // Append text fields
-// Object.keys(formData).forEach((key) => {
-//   form.append(key, formData[key]);
-// });
 
-// // Append files
-// if (document) {
-//   form.append('document', document);
-// }
-// portfolioImages.forEach((image, index) => {
-//   form.append(`portfolio_images[${index}]`, image);
-// });

@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { toast } from "react-toastify";
 import ConfirmDeleteModal from "../partials/DeleteModal";
 import Pagination from "../../partials/PaginationComponent";
+import loads from "../../../images/loads.gif";
 
 const Blogpanel = () => {
   const [allBlogPosts, setAllBlogPosts] = useState([]);
@@ -93,7 +94,7 @@ const Blogpanel = () => {
 
             <div className="row">
               {isLoading ? (
-                <p>Loading...</p>
+                <p>Loading... <img src={loads} className="img-fluid gif-loads-pager" alt="loads"/></p>
               ) : allBlogPosts.length > 0 ? (
                 allBlogPosts.map((post) => (
                   <div className="col-lg-6" key={post.id}>
@@ -102,14 +103,9 @@ const Blogpanel = () => {
                         <div className="col-lg-6">
                           <img
                             src={post.featured_image || blogimage}
-                            className="img-fluid"
+                            className="img-fluid vendors-img-api"
                             alt={post.title}
-                            style={{
-                              width: "200px",
-                              height: "100px",
-                              objectFit: "contain",
-                            }}
-                          />
+                            />
                         </div>
                         <div className="col-lg-6">
                           <h3 className="blog-title">{post.title}</h3>

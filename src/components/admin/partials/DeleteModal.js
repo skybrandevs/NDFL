@@ -13,7 +13,7 @@ const ConfirmDeleteModal = ({ show, onClose, onConfirm, vendorName }) => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="deleteVendorModalLabel">
-              Confirm Deletion
+              Delete Action
             </h5>
             <button
               type="button"
@@ -32,14 +32,14 @@ const ConfirmDeleteModal = ({ show, onClose, onConfirm, vendorName }) => {
               className="btn btn-secondary"
               onClick={onClose}
             >
-              Cancel
+              No, Cancel
             </button>
             <button
               type="button"
               className="btn btn-danger"
               onClick={onConfirm}
             >
-              Delete
+              Yes, Delete
             </button>
           </div>
         </div>

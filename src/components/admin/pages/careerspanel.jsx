@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Nav from "../partials/nav";
-import present from "../../../images/present.png";
 import add from "../../../images/add.svg";
 import { Link } from "react-router-dom";
 import pdf from "../../../images/pdf.svg";
@@ -8,6 +7,8 @@ import { useState } from "react";
 import { deleteSingleCareer, getAllCareers } from "../../../api/careers";
 import { toast } from "react-toastify";
 import ConfirmDeleteModal from "../partials/DeleteModal";
+import loads from "../../../images/loads.gif";
+import noimage from "../../../images/noimage.svg";
 
 const Careerspanel = () => {
   const [careers, setCareers] = useState([]);
@@ -73,7 +74,9 @@ const Careerspanel = () => {
         <div className="col-lg-10 bacc">
           <div className="card-admin-h">
             <h3 className="admin-header-title">Careers</h3>
-
+            {isLoading ? (
+            <img src={loads} className="img-fluid gif-loads-pager" alt="loads"/>
+            ) : (
             <div className="row">
               {careers?.map((career) => (
                 <div className="col-lg-6" key={career.id}>
@@ -83,24 +86,12 @@ const Careerspanel = () => {
                         {career.featured_image ? (
                           <img
                             src={career.featured_image}
-                            className="img-fluid"
+                            className="img-fluid vendors-img-api"
                             alt="img"
-                            style={{
-                              width: "100px",
-                              height: "100px",
-                              objectFit: "contain",
-                            }}
                           />
                         ) : (
-                          <div
-                            className="d-flex justify-content-center align-items-center border border-secondary rounded"
-                            style={{
-                              width: "100px",
-                              height: "100px",
-                              backgroundColor: "#f8f9fa",
-                            }}
-                          >
-                            <p className="text-muted mb-0">No Image</p>
+                          <div>
+                          <img src={noimage} className="img-fluid no-img-api" alt="no-image"/>
                           </div>
                         )}
                       </div>
@@ -123,7 +114,7 @@ const Careerspanel = () => {
                 </div>
               ))}
             </div>
-
+           )}
             <div className="row">
               <div className="col-lg-11 add-mr-top">
                 <Link to="/newcareer" className="link">

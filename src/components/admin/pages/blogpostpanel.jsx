@@ -4,8 +4,8 @@ import backarrowadmin from "../../../images/backarrowadmin.svg";
 import cloudup from "../../../images/cloudup.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { createBlog, getSingleBlogPost, updateSingleBlogSpot } from "../../../api/blogs";
-import { LucideLoaderPinwheel } from "lucide-react";
 import { toast } from "react-toastify";
+import loads from "../../../images/loads.gif";
 
 const Blogpostpanel = () => {
   const [formData, setFormData] = useState({
@@ -330,9 +330,11 @@ const Blogpostpanel = () => {
                   <option value="" disabled>
                     Select Option
                   </option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option value="1">Technology</option>
+                  <option value="2">Interior Design</option>
+                  <option value="3">Architecture</option>
+                  <option value="4">Events</option>
+                  <option value="5">Others</option>
                 </select>
               </div>
             </div>
@@ -342,7 +344,11 @@ const Blogpostpanel = () => {
             <button className="admin-save" onClick={handleSubmit}>
               {isLoading ? (
                 <>
-                  <LucideLoaderPinwheel /> Loading{" "}
+                 <img
+                      src={loads}
+                      className="img-fluid gif-loads"
+                      alt="loads"
+                    />{" "}
                 </>
               ) : (
                 "Save"

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../partials/nav";
-import coverimage from "../../../images/coverimage.png";
 import add from "../../../images/add.svg";
 import { Link } from "react-router-dom";
 import { deleteSingleVendors, getAllVendors } from "../../../api/vendor";
 import ConfirmDeleteModal from "../partials/DeleteModal";
 import { toast } from "react-toastify";
+import loads from "../../../images/loads.gif";
+import noimage from "../../../images/noimage.svg";
 
 const Vendorspanel = () => {
   const [allVendors, setAllVendors] = useState([]);
@@ -69,7 +70,7 @@ const Vendorspanel = () => {
           <div className="card-admin-h">
             <h3 className="admin-header-title">List of Vendors</h3>
             {isLoading ? (
-              <p>Loading list of vendors...</p>
+            <img src={loads} className="img-fluid gif-loads-pager" alt="loads"/>
             ) : (
               <div className="row">
                 {allVendors?.map((vendor, item) => {
@@ -83,22 +84,11 @@ const Vendorspanel = () => {
                                 src={vendor.portfolio_images[0].image_path}
                                 //   className="img-fluid rounded"
                                 alt={vendor.name || "Vendor Image"}
-                                style={{
-                                  width: "100px",
-                                  height: "100px",
-                                  objectFit: "contain",
-                                }}
+                               className="vendors-img-api"
                               />
                             ) : (
-                              <div
-                                className="d-flex justify-content-center align-items-center border border-secondary rounded"
-                                style={{
-                                  width: "100px",
-                                  height: "100px",
-                                  backgroundColor: "#f8f9fa",
-                                }}
-                              >
-                                <p className="text-muted mb-0">No Image</p>
+                              <div>
+                                <img src={noimage} className="img-fluid no-img-api" alt="no-image"/>
                               </div>
                             )}
                           </div>
@@ -106,7 +96,7 @@ const Vendorspanel = () => {
                             <h3 className="vendors-title">
                               {vendor.company_name}
                             </h3>
-                            {/* <span className="vendors-work">Capentry</span> */}
+                             <span className="vendors-work">Capentry</span> 
                             <div className="push-admin"></div>
                             <Link
                               to={`/vendorsdetailspanel/${vendor.id}`}

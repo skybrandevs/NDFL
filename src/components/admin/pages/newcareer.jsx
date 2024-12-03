@@ -5,6 +5,7 @@ import cloudup from "../../../images/cloudup.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { LucideLoaderPinwheel } from "lucide-react";
+import loads from "../../../images/loads.gif";
 import { toast } from "react-toastify";
 import { createCareer, getSingleCareer, updateSingleCareer } from "../../../api/careers";
 
@@ -219,7 +220,11 @@ const NewCareer = () => {
               {" "}
               {isLoading ? (
                 <>
-                  <LucideLoaderPinwheel /> Loading{" "}
+                 <img
+                      src={loads}
+                      className="img-fluid gif-loads"
+                      alt="loads"
+                    />{" "}
                 </>
               ) : (
                 "Save"

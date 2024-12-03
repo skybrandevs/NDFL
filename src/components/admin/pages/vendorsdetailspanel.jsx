@@ -6,6 +6,7 @@ import pdf from "../../../images/pdf.svg";
 import { Link, useParams } from "react-router-dom";
 import { getSingleVendors } from "../../../api/vendor";
 import { toast } from "react-toastify";
+import loads from "../../../images/loads.gif";
 
 const Vendorsdetailspanel = () => {
   const [singleVendor, setSingleVendor] = useState();
@@ -63,7 +64,7 @@ const Vendorsdetailspanel = () => {
           </Link>
           <div className="card-admin-h">
             {isLoading ? (
-              <p>Loading vendor details...</p>
+            <img src={loads} className="img-fluid gif-loads-pager" alt="loads"/>
             ) : (
               <>
                 <h3 className="admin-header-title">
@@ -79,13 +80,13 @@ const Vendorsdetailspanel = () => {
                   </div>
                   <div className="col-lg-3">
                     <p className="admin-sub-header-title">Email</p>
-                    <div className="text-field-testimonials d-flex ps-3 align-items-center">
+                    <div className="text-field-testimonials text-special d-flex ps-3 align-items-center">
                       {singleVendor?.email}
                     </div>
                   </div>
                   <div className="col-lg-3">
-                    <p className="admin-sub-header-title">Phone Number</p>
-                    <div className="text-field-testimonials d-flex ps-3 align-items-center">
+                    <p className="admin-sub-header-title pp">Phone Number</p>
+                    <div className="text-field-testimonials pp d-flex ps-3 align-items-center">
                       {singleVendor?.phone}
                     </div>
                   </div>
