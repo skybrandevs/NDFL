@@ -31,6 +31,33 @@ display: none !important;
   padding-right: 25px;
 }
 
+/**end**/
+
+/**start stripe css infinite scroll**/
+.diagonal-cut{
+  background-color:black;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: rotate(-3deg);
+  height:100%;
+  padding-top:20px;
+}
+
+.scroll{
+width:45px;
+margin-left:20px;
+}
+
+.text-scroll{
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left:20px;
+}
+
+
+
+
 
 /**end**/
 
@@ -335,8 +362,12 @@ background-size: cover;
     background-color:#0CA784;
     border-radius:30px;
     color: white;
-    padding: 50px 50px 97px 40px;
+    padding: 50px 50px 50px 40px;
     margin-bottom:40px;
+  }
+
+  .sg-1{
+    margin-top:-8px !important;
   }
 
 
@@ -344,8 +375,12 @@ background-size: cover;
     background-color:#FF4239;
     border-radius:30px;
     color: white;
-    padding: 50px 50px 97px 40px;
+    padding: 50px 50px 120px 40px;
     margin-bottom:40px;
+  }
+
+  .ish{
+    padding-bottom: 73px !important;
   }
 
   .black {
@@ -610,22 +645,27 @@ font-size: 14px;
   margin-bottom: -14px;
 }
 
-
+/*
 .scroll {
  
-  animation: scroll 10s linear infinite; /* Adjust duration as needed */
+  animation: scroll 10s linear infinite; 
 }
 
+*/
 
+
+/*
 
 @keyframes scroll {
   from {
       transform: translateX(0%);
   }
   to {
-      transform: translateX(-80%); /* Move completely off-screen */
+      transform: translateX(-80%); 
   }
 }
+*/
+
 
 /** end **/
 
@@ -1142,21 +1182,29 @@ font-size: 26px;
   font-size:14px;
   font-weight: 300;
   margin-right:25px;
+ display: inline-block;
+margin-top:20px;
  }
 
  .span-setting{
-  margin-top:70px;
-  margin-bottom:100px;
-  padding-left: 250px;
+  margin-top:30px;
+  margin-bottom:40px;
+  padding-left:365px;
+  padding-right:300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
  }
 
+
+
 .icon-tag{
-  width:25px;
+  width:22px;
   margin-right:10px;
 }
 
 .icon-tag-2{
-  width:18px;
+  width:15px;
   margin-right:10px;
 }
 

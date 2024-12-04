@@ -174,9 +174,32 @@ const Vendors = () => {
                     <option value="" disabled>
                       Select Option
                     </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="1">Masonry Works</option>
+                    <option value="2">Carpentry Works</option>
+                    <option value="3">Steel Works</option>
+                    <option value="4">Mental Works</option>
+                    <option value="5">Aluminium Works</option>
+                    <option value="6">Wood Works</option>
+                    <option value="7">Painting and Sculpture</option>
+                    <option value="8">Screeding Works</option>
+                    <option value="9">Partition Works</option>
+                    <option value="10">⁠Drywall Works</option>
+                    <option value="11">Glass Works</option>
+                    <option value="12">HVAC Works</option>
+                    <option value="13">Flooring Works</option>
+                    <option value="14">Upholstery Works</option>
+                    <option value="15">CCTV and Security Works</option>
+                    <option value="16">MEP Works</option>
+                    <option value="17">Roofing Works</option>
+                    <option value="18">Plumbing Works</option>
+                    <option value="19">Electrical Works</option>
+                    <option value="20">Insulation Works</option>
+                    <option value="21">Glazing Works</option>
+                    <option value="22">Tiling Works</option>
+                    <option value="23">Landscaping Works</option>
+                    <option value="24">Demolition Works</option>
+                    <option value="25">Excavation Works</option>
+                    <option value="26">⁠Branding works</option>
                   </select>
                 </div>
               </div>

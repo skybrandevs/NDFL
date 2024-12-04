@@ -32,7 +32,9 @@ const project = () => {
                 <span className='tag'><img src={ruler} className='img-fluid icon-tag' alt='ruler'/>120 Sqm</span>
                 <span className='tag'><img src={location} className='img-fluid icon-tag-2' alt='location'/>Lagos Nigeria</span>
                 <span className='tag'><img src={home} className='img-fluid icon-tag' alt='home'/>Interior Design</span>
+    
                 </div>
+            
             </div>
         </div>
     </div>

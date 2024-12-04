@@ -1,6 +1,7 @@
 import React from 'react'
 import emmanuelukah from '../../images/emmanuelukah.png';
-import stripe from '../../images/stripe.svg';
+import scroll from '../../images/scroll.svg';
+
 
 const statement = () => {
   return (
@@ -22,10 +23,147 @@ const statement = () => {
         </div>
 
 <div className='strip-background'>
+  <div className='diagonal-cut'>
+  <marquee width="100%" direction="left">
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Design Consultation</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Interior Design</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Facility Management</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>Architecture</span>
+   <img src={scroll} className='img-fluid scroll' alt='scroll'/><span className='text-scroll'>E-Design</span>
+  </marquee>
+   
+  </div>
 
-
- 
- <img src={stripe} className='img-fluid strip scroll' alt='stripe'/>  
  </div>
  
 

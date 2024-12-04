@@ -7,6 +7,7 @@ import vendors from '../../../images/vendors.svg';
 import blog from '../../../images/blog.svg';
 import careers from '../../../images/careers.svg';
 import message from '../../../images/message.svg';
+import back from '../../../images/back.svg';
 import { Link } from 'react-router-dom';
 const nav = () => {
   return (
@@ -23,6 +24,8 @@ const nav = () => {
   <Link to="/blogpanel" className="nav-link"><span><img src={blog} className='img-fluid icon-menu' alt='icon-menu'/></span>Blogs</Link>
   <Link to="/careerspanel" className="nav-link"><span><img src={careers} className='img-fluid icon-menu' alt='icon-menu'/></span>Careers</Link>
   <Link to="/messagepanel" className="nav-link"><span><img src={message} className='img-fluid icon-menu' alt='icon-menu'/></span>Messages</Link>
+
+  <Link to="/" className="nav-link"><span><img src={back} className='img-fluid icon-menu' alt='icon-menu'/></span>Back to Site</Link>
   </nav>
             </div>
         </div>

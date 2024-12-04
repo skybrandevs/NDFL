@@ -39,11 +39,11 @@ const services = () => {
         </div>
 
         <div className='col-lg-5'>
-       <div className='pink'>
+       <div className='pink ish'>
 <h3 className='h33'>Architectural Design</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
+<p className='p33'>Powerful spaces make a difference in our lives. These spaces are where we come to work, learn, play, heal and live. We never lose sight of this as we combine passion, creativity, research and expertise to deliver innovative spaces.</p>  
 <Link to="/about" className='line-removal'>  
-<button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
+<button className='btn-service sg-1'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
 </Link>
         </div>     
             </div>
@@ -55,7 +55,7 @@ const services = () => {
 <div className='col-lg-5'>
 <div className='blue'>
 <h3 className='h33'>Interior Design</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p> 
+<p className='p33'>Interior design is more than what hit the eyes as it makes a powerful difference in our lives. Neilz Design provides everything you need to turn an empty shell into a vibrant and enjoyable environment.</p> 
 <Link to="/about" className='line-removal'>   
 <button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
 </Link>
@@ -78,9 +78,9 @@ const services = () => {
         <div className='col-lg-5'>
        <div className='green'>
 <h3 className='h33'>Consulting</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p> 
+<p className='p33'>Is your workplace a through reflection of your Brand? The world is changing and corporations must rethink how they do business: how they manage their company, where and when they convene workers, generational differences, the impact of technology on the workplace, etc.</p> 
 <Link to="/about" className='line-removal'>   
-<button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
+<button className='btn-service sg-1'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
 </Link>
         </div>     
             </div>
@@ -93,7 +93,7 @@ const services = () => {
 <div className='col-lg-5'>
        <div className='orange'>
 <h3 className='h33'>Facility Management</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p> 
+<p className='p33'>Do you need experts to manage and maintain your building assets? We provides facilities management services for both commercial and residential spaces.</p> 
 <Link to="/about" className='line-removal'>   
 <button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>  
 </Link>   
@@ -117,7 +117,7 @@ const services = () => {
 <div className='col-lg-5'>
 <div className='black'>
 <h3 className='h33'>E-design</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
+<p className='p33'>We offer electronic design services to client who only needs us to provide design for their space, this service is only design based and for online purposes as the name implies.</p>  
 <Link to="/about" className='line-removal'>  
 <button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>   
 </Link>  
@@ -135,7 +135,7 @@ const services = () => {
 <div className='col-lg-5'>
        <div className='pink'>
 <h3 className='h33'>Office Space Listings</h3>
-<p className='p33'>Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality.</p>  
+<p className='p33'>As an esteemed partner of Churchgate and WTC, renowned brands in the business industry, we are uniquely positioned to offer our clients seamless access to premium office spaces.</p>  
 <Link to="/about" className='line-removal'>  
 <button className='btn-service'>Learn More <span><img src={arrowservice} className='img-fluid arrow-2' alt='arrow'/></span></button>     
 </Link>

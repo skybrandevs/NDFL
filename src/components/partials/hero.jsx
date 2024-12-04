@@ -4,6 +4,7 @@ import style2 from '../../images/style2.png';
 import style3 from '../../images/style3.png';
 import style4 from '../../images/style4.png';
 import functionmark from '../../images/functionmark.svg';
+import { Link } from 'react-router-dom';
 
 const hero = () => {
   return (
@@ -20,8 +21,12 @@ const hero = () => {
  take shape.</h3>
  <p className='ndfl-sentence'>Utilise our exceptional interior and architectural design services to transform your Nigerian workplaces and home spaces. This is where the journey to extraordinary space starts to unfold.</p>
  
+ <Link to="/portfolio">
  <button className='btn-full-colo'>View Portfolio</button>
+ </Link>
+ <Link to="/contact">
  <button className='btn-border-colo'>Contact Us</button>
+ </Link>
  
                      </div>
  
