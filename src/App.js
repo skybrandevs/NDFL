@@ -43,12 +43,16 @@ function App() {
         <Route path="/jobdescription" element={<Jobdescription />} />
         <Route path="/notfound" element={<Notfound />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/postdetials" element={<Postdetials />} />
+        <Route path="/postdetials/:blogId" element={<Postdetials />} />
         <Route path="/home" element={<Home />} />
         <Route path="/aboutpanel" element={<Aboutpanel />} />
         <Route path="/portfoliopanel" element={<Portfoliopanel />} />
         <Route
           path="/portfoliodetailspanel"
+          element={<Portfoliodetailspanel />}
+        />
+        <Route
+          path="/portfoliodetailspanel/:portfolioId"
           element={<Portfoliodetailspanel />}
         />
         <Route path="/vendorspanel" element={<Vendorspanel />} />
