@@ -166,6 +166,8 @@ const fetchTeamMembers = async () => {
     }
   };
 
+  console.log(featured_image,55)
+
   const img1 = useRef();
   const img2 = useRef();
 
@@ -211,7 +213,7 @@ const fetchTeamMembers = async () => {
                     {featured_image ? (
                       <>
                         <img
-                          src={blogId ? featured_image : featured_image.preview}
+                          src={!featured_image.preview ? featured_image : featured_image.preview}
                           alt={"featured image"}
                           className="img-fluid"
                         />
@@ -227,7 +229,6 @@ const fetchTeamMembers = async () => {
                       JPG, PNG or WebP. Less than 10MB
                     </p>
                     <p className="label-title-2">Drag and drop here or </p>
-                    {!blogId && (
                       <button
                         type="file"
                         className="input-file"
@@ -236,7 +237,6 @@ const fetchTeamMembers = async () => {
                       >
                         Browse
                       </button>
-                    )}
                     <input
                       type="file"
                       accept="image/*"
@@ -269,7 +269,7 @@ const fetchTeamMembers = async () => {
                     <>
                       <img
                         src={
-                          blogId
+                          !second_featured_image.preview
                             ? second_featured_image
                             : second_featured_image.preview
                         }
@@ -288,7 +288,6 @@ const fetchTeamMembers = async () => {
                     JPG, PNG or WebP. Less than 10MB
                   </p>
                   <p className="label-title-2">Drag and drop here or </p>
-                  {!blogId && (
                     <button
                       type="file"
                       className="input-file"
@@ -297,7 +296,6 @@ const fetchTeamMembers = async () => {
                     >
                       Browse
                     </button>
-                  )}
                   <input
                     type="file"
                     accept="image/*"

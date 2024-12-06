@@ -18,7 +18,7 @@ export const createPortfolio = async (formData) => {
   }
 };
 
-export const getAllPortfolios = async (page=1) => {
+export const getAllPortfolios = async (page = 1) => {
   try {
     const response = await axios.get(
       `${process.env.REACT_APP_API_URL}/api/v1/portfolios?page=${page}`,
@@ -70,19 +70,35 @@ export const deleteSinglePortfolios = async (id) => {
 };
 
 export const updateSinglePortfolio = async (id, form) => {
-    try {
-      const response = await axios.put(
-        `${process.env.REACT_APP_API_URL}/api/v1/portfolios/${id}`,
-        form,
-        {
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      return response.data;
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  try {
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/portfolios/${id}`,
+      form,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteSinglePortfolioImage = async (id, portfolioId) => {
+  try {
+    const response = await axios.delete(
+      `${process.env.REACT_APP_API_URL}/api/v1/portfolios/${portfolioId}/images/${id}`,      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -73,13 +73,13 @@ export const deleteSingleBlogSpot = async (id) => {
 
 export const updateSingleBlogSpot = async (id, form) => {
   try {
-    const response = await axios.put(
+    const response = await axios.post(
       `${process.env.REACT_APP_API_URL}/api/v1/blogs/${id}`,
       form,
       {
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
         },
       }
     );

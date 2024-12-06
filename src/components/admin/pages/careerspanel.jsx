@@ -41,9 +41,9 @@ const Careerspanel = () => {
       const response = await deleteSingleCareer(careerToDelete?.id);
       setShowModal(false);
       fetchCareers();
-      if (response.message) {
-        toast.success("Career Successfully Deleted");
-      }
+      // if (response.message) {
+      //   toast.success("Career Successfully Deleted");
+      // }
     } catch (error) {
       console.log("Error deleting career:", error);
       toast.error("Failed to delete career!");
