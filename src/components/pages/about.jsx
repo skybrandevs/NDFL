@@ -327,14 +327,14 @@ const About = () => {
                         <img
                           src={teamMember?.image_path}
                           className={`img-fluid ${
-                            profile > 1 ? `profiles-${profile}` : "profiles"
+                            profile> 1 ? `profiles-${profile}` : "profiles"
                           }`}
                           alt="emmanuel"
                         />
                         <h3 className="prof-name">{teamMember?.name}</h3>
                         <p
                           className={`${
-                            profile > 1
+                            profile>  1
                               ? `prof-designation-${profile}`
                               : "prof-designation"
                           }`}

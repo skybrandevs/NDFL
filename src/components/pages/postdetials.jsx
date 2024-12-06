@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/partials/navbar";
 import back from "../../images/back.svg";
 import { Link, useParams } from "react-router-dom";
-import authorprofile from "../../images/authorprofile.svg";
-import imagedetails from "../../images/imagedetails.png";
+import loads from "../../images/loads.gif";
 import Footer from "../../components/partials/footer";
 import { getSingleBlogPost } from "../../api/blogs";
 import { toast } from "react-toastify";
@@ -64,7 +63,11 @@ const Postdetials = () => {
 
       <div className="container">
         {isLoading ? (
-          <p>Loading....</p>
+           <img
+           src={loads}
+           className="img-fluid gif-loads-pager"
+           alt="loads"
+         />
         ) : (
           <div className="row">
             <div className="col-lg-2"></div>

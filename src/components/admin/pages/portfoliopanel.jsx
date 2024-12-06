@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../partials/nav";
-import coverimage from "../../../images/coverimage.png";
 import add from "../../../images/add.svg";
 import { Link } from "react-router-dom";
 import {
@@ -103,12 +102,12 @@ const Portfoliopanel = () => {
                           <div className="col-lg-6">
                             <img
                               src={portfolio.featured_image}
-                              className="img-fluid"
+                              className="img-fluid vendors-img-api"
                               alt="img"
                             />
                           </div>
                           <div className="col-lg-6">
-                            <h3 className="port-panel-header">
+                            <h3 className="port-panel-header excerpt-portfolio">
                               {portfolio.project_name}
                             </h3>
                             <Link to={`/portfoliodetailspanel/${portfolio.id}`} className="link">

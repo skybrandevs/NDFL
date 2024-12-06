@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import mansory1 from "../../images/mansory1.png";
-import mansory2 from "../../images/mansory2.png";
-import mansory3 from "../../images/mansory3.png";
-import { Link } from "react-router-dom";
 import loads from "../../images/loads.gif";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
@@ -89,7 +85,7 @@ const Mansoryportfolio = () => {
             </div>
             <div class="tab-content" id="pills-tabContent">
               {isLoading ? (
-                <img src={loads} className="img-fluid gif-loads" alt="loads" />
+                <img src={loads} className="img-fluid gif-loads-pager" alt="loads" />
               ) : (
                 <div
                   class="tab-pane fade show active trans"

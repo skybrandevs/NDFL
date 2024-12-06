@@ -131,7 +131,7 @@ const Aboutpanel = () => {
                     <img
                       src={cloudup}
                       alt="Upload Placeholder"
-                      className="img-fluid"
+                      className="img-fluid cloudup"
                     />
                   )}
                   <p className="label-title">
@@ -208,7 +208,7 @@ const Aboutpanel = () => {
                     <img
                       src={cloudup}
                       alt="Upload Placeholder"
-                      className="img-fluid"
+                      className="img-fluid cloudup"
                     />
                   )}
                   <p className="label-title">

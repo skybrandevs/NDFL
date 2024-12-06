@@ -237,7 +237,7 @@ const Portfoliodetailspanel = () => {
                     <img
                       src={isEditing ? image : cloudup}
                       alt="Upload Placeholder"
-                      className="img-fluid"
+                      className="img-fluid cloudup"
                     />
                   )}
                   <p className="label-title">
@@ -378,7 +378,7 @@ const Portfoliodetailspanel = () => {
                           <img
                             src={cloudup}
                             alt="Upload Placeholder"
-                            className="img-fluid"
+                            className="img-fluid cloudup"
                           />
                           <p className="label-title">
                             JPG, PNG, or WebP. Less than 10MB

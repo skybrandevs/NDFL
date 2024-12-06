@@ -186,7 +186,11 @@ const fetchTeamMembers = async () => {
           </Link>
 
           {isLoading ? (
-            <p>Loadingg....</p>
+               <img
+               src={loads}
+               className="img-fluid gif-loads-pager"
+               alt="loads"
+             />
           ) : (
             <div className="card-admin-h">
               <h3 className="admin-header-title">New Blog Post</h3>
@@ -216,7 +220,7 @@ const fetchTeamMembers = async () => {
                       <img
                         src={cloudup}
                         alt="Upload Placeholder"
-                        className="img-fluid"
+                        className="img-fluid cloudup"
                       />
                     )}
                     <p className="label-title">
@@ -277,7 +281,7 @@ const fetchTeamMembers = async () => {
                     <img
                       src={cloudup}
                       alt="Upload Placeholder"
-                      className="img-fluid"
+                      className="img-fluid cloudup"
                     />
                   )}
                   <p className="label-title">

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import bloghero from "../../images/bloghero.png";
-import authorprofile from "../../images/authorprofile.svg";
-import blogpicture from "../../images/blogpicture.png";
 import Navbar from "../../components/partials/navbar";
 import { Link } from "react-router-dom";
 import { getAllBlogPosts } from "../../api/blogs";
 import { toast } from "react-toastify";
 import { getAllTeamMembers } from "../../api/about-us";
+import loads from "../../images/loads.gif";
 
 const Blog = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -63,7 +61,12 @@ const Blog = () => {
     <div>
       <Navbar></Navbar>
      {
-        isLoading ? <p>Loading...</p> :
+        isLoading ? 
+        <img
+        src={loads}
+        className="img-fluid gif-loads-pager"
+        alt="loads"
+      />:
      <>
       <div className="abstract-portfolio">
         <div className="container">
@@ -71,10 +74,10 @@ const Blog = () => {
             <div className="col-lg-2"></div>
             <div className="col-lg-8">
               <div className="wrapper-blog">
+               <div className="overlay"></div>
                 <img
                   src={post?.featured_image}
                   className="img-fluid bloghero"
-                  alt="blog=hero"
                 />
                 <div className="wrapper-mini">
                   <span className="tag-blog">{post?.category}</span>
@@ -83,8 +86,8 @@ const Blog = () => {
                     <img
                       src={post?.featured_image}
                       className="img-fluid auth-profile"
-                      alt="authorprofile"
-                    />
+                     />
+                     
                   </span>{" "}
                   <span className="author-name">{post?.posted_by}</span>{" "}
                   <span className="blog-date">
@@ -94,7 +97,7 @@ const Blog = () => {
                           month: "long", // Displays the month in words
                           day: "numeric",
                         })
-                      : "No date available"}
+                      : "Nothing to read here yet, check back"}
                   </span>
                 </div>
               </div>
@@ -124,9 +127,9 @@ const Blog = () => {
                           alt="blog=hero"
                         />
                         <span className="tag-blog-main-component">
-                          Interior Design
+                        {post?.category}
                         </span>
-                        <p className="title-blog-post-main-component">
+                        <p className="title-blog-post-main-component excerpt">
                          {blogPost.title}
                         </p>
                       </Link>
@@ -147,7 +150,7 @@ const Blog = () => {
                           month: "long", // Displays the month in words
                           day: "numeric",
                         })
-                      : "No date available"}
+                      : "Nothing here yet, check back"}
                       </span>
                     </div>
                   </div>

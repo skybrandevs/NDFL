@@ -94,7 +94,7 @@ const Blogpanel = () => {
 
             <div className="row">
               {isLoading ? (
-                <p>Loading... <img src={loads} className="img-fluid gif-loads-pager" alt="loads"/></p>
+                <p><img src={loads} className="img-fluid gif-loads-pager" alt="loads"/></p>
               ) : allBlogPosts.length > 0 ? (
                 allBlogPosts.map((post) => (
                   <div className="col-lg-6" key={post.id}>
@@ -108,7 +108,7 @@ const Blogpanel = () => {
                             />
                         </div>
                         <div className="col-lg-6">
-                          <h3 className="blog-title">{post.title}</h3>
+                          <h3 className="blog-title excerpt-admin">{post.title}</h3>
                           <div className="push-admin"></div>
                           <Link
                             to={`/blogpostpanel/${post.id}`}
