@@ -5,6 +5,7 @@ import cloudup from "../../../images/cloudup.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   createPortfolio,
+  deleteSinglePortfolioImage,
   getSinglePortfolio,
   updateSinglePortfolio,
 } from "../../../api/portfolio";
@@ -28,6 +29,7 @@ const Portfoliodetailspanel = () => {
   const navigation = useNavigate();
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [image, setImage] = useState();
+  const [deleteLoader, setDeleteLoader] = useState(false);
 
   // Array of refs for each input
   const featuredImgRef = useRef();
@@ -89,7 +91,9 @@ const Portfoliodetailspanel = () => {
           setSelectedFiles(
             (data.images || []).map((imageUrl) => ({
               preview: imageUrl.image_path, // URL of the image
-              isExisting: true, // Mark as an existing image
+              isExisting: true,
+              id: imageUrl.id,
+              portfolioId: imageUrl.portfolio_id, // Mark as an existing image
             }))
           );
           setIsLoading(false);
@@ -118,6 +122,22 @@ const Portfoliodetailspanel = () => {
     });
   };
 
+  const handleDeleteOtherImage = async (id, portfolioId, index) => {
+    try {
+      setDeleteLoader(true);
+      const { data } = await deleteSinglePortfolioImage(id, portfolioId);
+      setSelectedFiles((prevFiles) => {
+        const updatedFiles = [...prevFiles];
+        updatedFiles[index] = null;
+        setDeleteLoader(false);
+        return updatedFiles;
+      });
+    } catch (e) {
+      console.log(e);
+      setDeleteLoader(false);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -137,7 +157,7 @@ const Portfoliodetailspanel = () => {
     form.append("project_description", formData.project_description);
 
     // Add the featured image
-    if (featuredImage) {
+    if (featuredImage && featuredImage.file instanceof File) {
       form.append(
         "featured_image",
         featuredImage.file,
@@ -188,10 +208,15 @@ const Portfoliodetailspanel = () => {
       setIsLoading(false);
     } catch (error) {
       console.error("Error submitting portfolio:", error);
-      toast.error("Failed to submit portfolio!");
+      if (isEditing) {
+        toast.error("Failed to update portfolio!");
+      } else {
+        toast.error("Failed to submit portfolio!");
+      }
       setIsLoading(false);
     }
   };
+  console.log(selectedFiles);
 
   return (
     <div>
@@ -244,16 +269,14 @@ const Portfoliodetailspanel = () => {
                     JPG, PNG or WebP. Less than 10MB
                   </p>
                   <p className="label-title-2">Drag and drop here or </p>
-                  {!isEditing && (
-                    <button
-                      type="file"
-                      className="input-file"
-                      ref={featuredImgRef}
-                      onClick={() => featuredImgRef.current.click()}
-                    >
-                      Browse
-                    </button>
-                  )}
+                  <button
+                    type="file"
+                    className="input-file"
+                    ref={featuredImgRef}
+                    onClick={() => featuredImgRef.current.click()}
+                  >
+                    Browse
+                  </button>
                   <input
                     type="file"
                     accept="image/*"
@@ -362,15 +385,31 @@ const Portfoliodetailspanel = () => {
                             alt={`Selected ${index}`}
                             className="img-fluid"
                           />
-                          {!isEditing && (
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-danger mt-2"
-                              onClick={() => handleRemoveImage(index)}
-                            >
-                              Remove
-                            </button>
-                          )}
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-danger mt-2"
+                            onClick={() =>
+                              isEditing && file.id
+                                ? handleDeleteOtherImage(
+                                    file.id,
+                                    file.portfolioId,
+                                    index
+                                  )
+                                : handleRemoveImage(index)
+                            }
+                          >
+                            {deleteLoader && file.id ? (
+                              <>
+                                <img
+                                  src={loads}
+                                  className="img-fluid gif-loads"
+                                  alt="loads"
+                                />{" "}
+                              </>
+                            ) : (
+                              "Remove"
+                            )}
+                          </button>
                         </>
                       ) : (
                         // Display placeholder for empty slots
@@ -386,15 +425,13 @@ const Portfoliodetailspanel = () => {
                           <p className="label-title-2">
                             Drag and drop here or{" "}
                           </p>
-                          {!isEditing && (
-                            <button
-                              type="button"
-                              className="input-file"
-                              onClick={() => handleBrowseClick(index)}
-                            >
-                              Browse
-                            </button>
-                          )}
+                          <button
+                            type="button"
+                            className="input-file"
+                            onClick={() => handleBrowseClick(index)}
+                          >
+                            Browse
+                          </button>
                           <input
                             type="file"
                             accept="image/*"
