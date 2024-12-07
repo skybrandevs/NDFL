@@ -24,6 +24,8 @@ import Careerspanel from "././components/admin/pages/careerspanel";
 import Newcareer from "././components/admin/pages/newcareer";
 import Candidate from "././components/admin/pages/candidate";
 import Messagepanel from "././components/admin/pages/messagepanel";
+import Addtestimonial from "././components/admin/pages/addtestimonial";
+import Addteam from "././components/admin/pages/addteam";
 import Preview from "././components/admin/pages/preview";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -66,6 +68,8 @@ function App() {
         <Route path="/candidate" element={<Candidate />} />
         <Route path="/messagepanel" element={<Messagepanel />} />
         <Route path="/preview" element={<Preview />} />
+        <Route path="/addtestimonial" element={<Addtestimonial/>}/>
+        <Route path="/addteam" element={<Addteam/>}/>
       </Routes>
       <ToastContainer position="top-center" />
     </Router>

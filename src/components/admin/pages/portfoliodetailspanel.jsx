@@ -447,7 +447,7 @@ const Portfoliodetailspanel = () => {
               })}
             </div>
             <div>
-              <button className="admin-save" onClick={handleSubmit}>
+              <button className="admin-save-3" onClick={handleSubmit}>
                 {isLoading ? (
                   <>
                     <img

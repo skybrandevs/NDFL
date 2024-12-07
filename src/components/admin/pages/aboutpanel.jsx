@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { createSection, createTeamMembers } from "../../../api/about-us";
 import loads from "../../../images/loads.gif";
+import kosie from '../../../images/kosie.png';
+import { Link } from "react-router-dom";
 
 const Aboutpanel = () => {
   const [formData, setFormData] = useState({
@@ -172,86 +174,56 @@ const Aboutpanel = () => {
             <h3 className="admin-header-title">Our team</h3>
 
             <div className="row">
-              <div className="col-3">
-                <p className="admin-sub-header-title">Full Name</p>
-                <input
-                  type="text"
-                  placeholder="Emmanuel Ukah"
-                  className="text-field-testimonials"
-                  value={formData.name}
-                  name="name"
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="col-3">
-                <p className="admin-sub-header-title">Designation</p>
-                <input
-                  type="text"
-                  placeholder="Design Lead"
-                  className="text-field-testimonials"
-                  value={formData.designation}
-                  name="designation"
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="col-3">
-                <div className="card-upload-about">
-                  {image ? (
-                    <>
-                      <img
-                        src={image.preview}
-                        alt={formData.name}
-                        className="img-fluid"
-                      />
-                    </>
-                  ) : (
-                    <img
-                      src={cloudup}
-                      alt="Upload Placeholder"
-                      className="img-fluid cloudup"
-                    />
-                  )}
-                  <p className="label-title">
-                    JPG, PNG or WebP. Less than 10MB
-                  </p>
-                  <p className="label-title-2">Drag and drop here or </p>
-                  <button
-                    type="file"
-                    className="input-file"
-                    ref={imgRef}
-                    onClick={() => imgRef.current.click()}
-                  >
-                    Browse
-                  </button>
+           <div className="col-lg-6">
+           <div className="fancy-card-admin">
+                        <div className="row">
+                          <div className="col-lg-6">
+<img src={kosie} className='img-fluid' alt='client-face'/>
+     </div>
 
-                  <input
-                    type="file"
-                    accept="image/*"
-                    ref={imgRef}
-                    style={{ display: "none" }}
-                    onChange={handleFileChange}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="row">
+     <div className="col-lg-6">
+<h3>Kosie Okonkwo</h3>
+<Link to="/addteam" className='link'>
+<span className="edit">Edit</span>
+</Link>
+ <span className="delete">Delete</span>
+     </div>
+
+     </div>
+    </div>
+           </div>
+
+           <div className="col-lg-6">
+           <div className="fancy-card-admin">
+                        <div className="row">
+                          <div className="col-lg-6">
+<img src={kosie} className='img-fluid' alt='client-face'/>
+     </div>
+
+     <div className="col-lg-6">
+<h3>Kosie Okonkwo</h3>
+<Link to="/addteam" className='link'>
+<span className="edit">Edit</span>
+</Link>
+ <span className="delete">Delete</span>
+     </div>
+
+     </div>
+    </div>        
+           </div>
+           
+            
               <div className="col-lg-11">
+                <Link to="/addteam" className="link">
                 <span className="flotter">
                   <img src={add} className="img-fluid add" alt="add" />
                   Add another
                 </span>
+                </Link>
               </div>
             </div>
           </div>
-          <button className="admin-save" onClick={handleCreateTeamMember}>
-            {isLoading ? (
-              <>
-                <img src={loads} className="img-fluid gif-loads" alt="loads" />{" "}
-              </>
-            ) : (
-              "Save"
-            )}
-          </button>
+         
         </div>
       </div>
     </div>
