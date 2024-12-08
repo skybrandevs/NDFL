@@ -179,7 +179,25 @@ export const getTestimonials = async () => {
 export const getSingleTestimonial = async (id) => {
   try {
     const response = await axios.get(
-      `${process.env.REACT_APP_API_URL}/api/v1/testimonials/id`,
+      `${process.env.REACT_APP_API_URL}/api/v1/testimonials/${id}`,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateSingleTestimonial = async (id, form) => {
+  try {
+    const response = await axios.put(
+      `${process.env.REACT_APP_API_URL}/api/v1/testimonials/${id}`,
+      form,
       {
         headers: {
           Accept: "application/json",

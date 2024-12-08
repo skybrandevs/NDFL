@@ -3,7 +3,7 @@ import Nav from "../partials/nav";
 import backarrowadmin from "../../../images/backarrowadmin.svg";
 import cloudup from "../../../images/cloudup.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { createTeamMembers, getSingleTeamMember } from "../../../api/about-us";
+import { createTeamMembers, getSingleTeamMember, updateTeamMember } from "../../../api/about-us";
 import { toast } from "react-toastify";
 import loads from "../../../images/loads.gif";
 
@@ -28,13 +28,12 @@ const Addteam = () => {
           setIsLoading(true);
           const { data } = await getSingleTeamMember(id);
           setFormData({
-            name: data.name,
-            designation: data.designation
+            name: data?.name,
+            designation: data?.designation
           });
-          // setFiles({
-          //   featured_image: data.featured_image || null,
-          //   second_featured_image: data.second_featured_image || null,
-          // })
+          setImage({
+            preview: data?.image_path
+          })
           setIsLoading(false);
         } catch (error) {
           setIsLoading(false);
@@ -74,14 +73,26 @@ const Addteam = () => {
     form.append("name", formData.name);
     form.append("designation", formData.designation);
 
-    if (image) {
+    if (image &&  image.file instanceof File) {
       form.append("image", image.file, image.file.name);
     }
 
     try {
       setSubmitLoading(true);
-      let createResponse = await createTeamMembers(form);
-      if (createResponse.data.name) {
+      if(id && id !== undefined) {
+        const dataToSubmit = {
+          name, designation
+        }
+        const {data} = await updateTeamMember(id, dataToSubmit)
+          if(data?.name) {
+            toast.success("Team Member updated successfully!");
+            setSubmitLoading(false);
+            navigation("/aboutpanel");
+            return;
+          }
+      } else {
+      let {data} = await createTeamMembers(form);
+      if (data?.name) {
         toast.success("Team Member created successfully!");
         setSubmitLoading(false);
         setFormData({
@@ -92,6 +103,7 @@ const Addteam = () => {
         navigation("/aboutpanel");
         return;
       }
+    }
     } catch (error) {
       toast.error("Failed to create team member!");
       setSubmitLoading(false);

@@ -14,6 +14,7 @@ export const createVendor = async (formData) => {
     );
     return response.data;
   } catch (error) {
+    throw error
     console.log(error);
   }
 };

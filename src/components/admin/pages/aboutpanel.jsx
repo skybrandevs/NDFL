@@ -187,7 +187,7 @@ const Aboutpanel = () => {
 
                       <div className="col-lg-6">
                         <h3>{member.name}</h3>
-                        <Link to="/addteam" className="link">
+                        <Link to={`/addteam/${member.id}`} className="link">
                           <span className="edit">Edit</span>
                         </Link>
                         <span

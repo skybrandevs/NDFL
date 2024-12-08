@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../partials/nav";
 import { Link } from "react-router-dom";
-import { getMessage } from "../../../api/messages";
+import { deleteMessage, getMessage } from "../../../api/messages";
 import { toast } from "react-toastify";
 import ConfirmDeleteModal from "../partials/DeleteModal";
 import loads from "../../../images/loads.gif";
@@ -34,15 +34,15 @@ const Messagepanel = () => {
 
   const handleDeleteConfirm = async () => {
     try {
-      const response = await getMessage();
+      const {data } = await deleteMessage(messageToDelete.id);
       setShowModal(false);
       fetchMessages();
-      if (response.message) {
-        toast.success("Blog post Successfully Deleted");
+      if (data == "message deleted") {
+        toast.success("message successfully Deleted");
       }
     } catch (error) {
-      console.log("Error deleting blog post:", error);
-      toast.error("Failed to delete blog post!");
+      console.log("Error deleting message:", error);
+      toast.error("Failed to delete message!");
     }
   };
 
@@ -78,7 +78,7 @@ const Messagepanel = () => {
               <thead>
                 <tr>
                   <th scope="col">Name</th>
-                  <th scope="col">Phone number</th>
+                  <th scope="col">Email</th>
                   <th scope="col">Message</th>
                 </tr>
               </thead>
@@ -86,11 +86,11 @@ const Messagepanel = () => {
                 {allMessages?.map((message, index) => (
                   <tr key={index}>
                   <td>{message.name}</td>
-                  <td>{message.phone_number}</td>
+                  <td>{message.email}</td>
                   <td>{message.message}</td>
 
                   <td>
-                    <Link to="/preview" className="link">
+                    <Link to={`/preview/${message.id}`} className="link">
                       <span className="v">View</span>
                     </Link>
                     <span className="d"

@@ -4,7 +4,11 @@ import backarrowadmin from "../../../images/backarrowadmin.svg";
 import cloudup from "../../../images/cloudup.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { createTestimony, getSingleTestimonial } from "../../../api/home";
+import {
+  createTestimony,
+  getSingleTestimonial,
+  updateSingleTestimonial,
+} from "../../../api/home";
 import loads from "../../../images/loads.gif";
 
 const Addtestimonial = () => {
@@ -16,6 +20,7 @@ const Addtestimonial = () => {
   });
   const [submitLoader, setSubmitLoader] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [submitLoading, setSubmitLoading] = useState(false);
   const imgRef = useRef();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -44,7 +49,7 @@ const Addtestimonial = () => {
       toast.warning("Please fill in all required fields!");
       return;
     }
-    const form= new FormData();
+    const form = new FormData();
     form.append("quote", quote);
     form.append("name", name);
     form.append("designation", designation);
@@ -52,14 +57,27 @@ const Addtestimonial = () => {
     if (image && image.file instanceof File) {
       form.append("image", image.file, image.file.name);
     }
-
     setSubmitLoader(true);
     try {
-      const { data } = await createTestimony(form);
-      if (data.quote) {
-        toast.success(`Testimony uploaded successfully!`);
-        setSubmitLoader(false);
-        navigate("/home");
+      if (id && id !== undefined) {
+        const { data } = await updateSingleTestimonial(id, {
+          name,
+          designation,
+        });
+        if (data.name) {
+          toast.success(`Testimony updated successfully!`);
+          setSubmitLoader(false);
+          navigate("/home");
+          setSubmitLoader(false);
+        }
+      } else {
+        const { data } = await createTestimony(form);
+        if (data.quote) {
+          toast.success(`Testimony uploaded successfully!`);
+          setSubmitLoader(false);
+          navigate("/home");
+          setSubmitLoader(false);
+        }
       }
     } catch (error) {
       console.error("Error uploading image:", error);
@@ -68,21 +86,29 @@ const Addtestimonial = () => {
     }
   };
 
-  // useEffect(() => {
-  //   if (id) {
-  //     const fetchTestimoialDetails = async () => {
-  //       try {
-  //         setIsLoading(true);
-  //         const { data } = await getSingleTestimonial(id);
-  //         console.log(data, 3534)
-  //       } catch (error) {
-  //         setIsLoading(false);
-  //         toast.error("Failed to load blog details.");
-  //       }
-  //     };
-  //     fetchTestimoialDetails();
-  //   }
-  // }, [id]);
+  useEffect(() => {
+    if (id) {
+      const fetchTestimoialDetails = async () => {
+        try {
+          setIsLoading(true);
+          const { data } = await getSingleTestimonial(id);
+          setFormData({
+            name: data[0]?.name,
+            designation: data[0]?.designation,
+            quote: data[0]?.quote,
+            image: {
+              preview: data[0]?.image_path,
+            },
+          });
+          setIsLoading(false);
+        } catch (error) {
+          setIsLoading(false);
+          toast.error("Failed to load blog details.");
+        }
+      };
+      fetchTestimoialDetails();
+    }
+  }, [id]);
 
   return (
     <div>
@@ -90,110 +116,114 @@ const Addtestimonial = () => {
         <div className="col-lg-2">
           <Nav></Nav>
         </div>
-        <div className="col-lg-10 bacc">
-          <Link to="/home" className="link">
-            <img
-              src={backarrowadmin}
-              className="img-fluid backarrowadmin"
-              alt="backarrowadmin"
-            />
-          </Link>
+        {isLoading ? (
+          <img src={loads} className="img-fluid gif-loads-pager" alt="loads" />
+        ) : (
+          <div className="col-lg-10 bacc">
+            <Link to="/home" className="link">
+              <img
+                src={backarrowadmin}
+                className="img-fluid backarrowadmin"
+                alt="backarrowadmin"
+              />
+            </Link>
 
-          <div className="card-admin-h">
-            <h3 className="admin-header-title">New Testimonial</h3>
+            <div className="card-admin-h">
+              <h3 className="admin-header-title">New Testimonial</h3>
 
-            <div className="card-testimonial">
-              <div className="row">
-                <div className="col-lg-4">
-                  <p className="admin-sub-header-title">Name</p>
-                  <input
-                    type="text"
-                    placeholder="Joke Silva"
-                    className="text-field-testimonials"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="col-lg-4">
-                  <p className="admin-sub-header-title">Designation</p>
-                  <input
-                    type="text"
-                    placeholder="CEO Chicken Republic"
-                    className="text-field-testimonials"
-                    name="designation"
-                    value={formData.designation}
-                    onChange={handleChange}
-                  />
-                </div>
-
+              <div className="card-testimonial">
                 <div className="row">
-                  <div className="col-lg-8">
-                    <p className="admin-sub-header-title">Quote</p>
+                  <div className="col-lg-4">
+                    <p className="admin-sub-header-title">Name</p>
                     <input
                       type="text"
-                      placeholder="Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality."
-                      className="text-field-quote"
-                      name="quote"
-                      value={formData.quote}
+                      placeholder="Joke Silva"
+                      className="text-field-testimonials"
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
                     />
                   </div>
 
                   <div className="col-lg-4">
-                    {formData.image && formData.image.preview ? (
-                      <img
-                        src={formData.image.preview}
-                        alt={`Uploaded Preview`}
-                        className="img-fluid"
-                      />
-                    ) : (
-                      // Display placeholder for empty slots
-                      <img
-                        src={cloudup}
-                        alt="Upload Placeholder"
-                        className="img-fluid cloudup"
-                      />
-                    )}
-                    <p className="label-title">
-                      JPG, PNG, or WebP. Less than 10MB
-                    </p>
-                    <p className="label-title-2">Drag and drop here or </p>
-                    <button
-                      type="button"
-                      className="input-file"
-                      onClick={() => imgRef.current.click()}
-                    >
-                      Browse
-                    </button>
+                    <p className="admin-sub-header-title">Designation</p>
                     <input
-                      type="file"
-                      accept="image/*"
-                      ref={imgRef}
-                      style={{ display: "none" }}
-                      onChange={handleFileChange}
+                      type="text"
+                      placeholder="CEO Chicken Republic"
+                      className="text-field-testimonials"
+                      name="designation"
+                      value={formData.designation}
+                      onChange={handleChange}
                     />
                   </div>
+
+                  <div className="row">
+                    <div className="col-lg-8">
+                      <p className="admin-sub-header-title">Quote</p>
+                      <input
+                        type="text"
+                        placeholder="Crafting future-ready architectural designs that blend innovation with sustainability. Our meticulous approach ensures every structure stands out in aesthetics and functionality."
+                        className="text-field-quote"
+                        name="quote"
+                        value={formData.quote}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    <div className="col-lg-4">
+                      {formData.image && formData.image.preview ? (
+                        <img
+                          src={formData.image.preview}
+                          alt={`Uploaded Preview`}
+                          className="img-fluid"
+                        />
+                      ) : (
+                        // Display placeholder for empty slots
+                        <img
+                          src={cloudup}
+                          alt="Upload Placeholder"
+                          className="img-fluid cloudup"
+                        />
+                      )}
+                      <p className="label-title">
+                        JPG, PNG, or WebP. Less than 10MB
+                      </p>
+                      <p className="label-title-2">Drag and drop here or </p>
+                      <button
+                        type="button"
+                        className="input-file"
+                        onClick={() => imgRef.current.click()}
+                      >
+                        Browse
+                      </button>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        ref={imgRef}
+                        style={{ display: "none" }}
+                        onChange={handleFileChange}
+                      />
+                    </div>
+                  </div>
                 </div>
+                <button className="admin-save-3" onClick={handleSubmit}>
+                  {" "}
+                  {submitLoader ? (
+                    <>
+                      <img
+                        src={loads}
+                        className="img-fluid gif-loads"
+                        alt="loads"
+                      />{" "}
+                    </>
+                  ) : (
+                    "Save"
+                  )}
+                </button>
               </div>
-              <button className="admin-save-3" onClick={handleSubmit}>
-                {" "}
-                {submitLoader ? (
-                  <>
-                    <img
-                      src={loads}
-                      className="img-fluid gif-loads"
-                      alt="loads"
-                    />{" "}
-                  </>
-                ) : (
-                  "Save"
-                )}
-              </button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

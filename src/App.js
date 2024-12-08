@@ -67,10 +67,11 @@ function App() {
         <Route path="/newcareer/:careerId" element={<Newcareer />} />
         <Route path="/candidate/:id" element={<Candidate />} />
         <Route path="/messagepanel" element={<Messagepanel />} />
-        <Route path="/preview" element={<Preview />} />
+        <Route path="/preview/:id" element={<Preview />} />
         <Route path="/addtestimonial" element={<Addtestimonial/>}/>
         <Route path="/addtestimonial/:id" element={<Addtestimonial/>}/>
         <Route path="/addteam" element={<Addteam/>}/>
+        <Route path="/addteam/:id" element={<Addteam/>}/>
       </Routes>
       <ToastContainer position="top-center" />
     </Router>

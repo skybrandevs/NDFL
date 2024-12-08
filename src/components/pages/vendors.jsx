@@ -6,6 +6,35 @@ import { toast } from "react-toastify";
 import { createVendor } from "../../api/vendor";
 import loads from "../../images/loads.gif";
 
+const sectors = [
+  { id: 1, name: "Masonry Works" },
+  { id: 2, name: "Carpentry Works" },
+  { id: 3, name: "Steel Works" },
+  { id: 4, name: "Mental Works" },
+  { id: 5, name: "Aluminium Works" },
+  { id: 6, name: "Wood Works" },
+  { id: 7, name: "Painting and Sculpture" },
+  { id: 8, name: "Screeding Works" },
+  { id: 9, name: "Partition Works" },
+  { id: 10, name: "Drywall Works" },
+  { id: 11, name: "Glass Works" },
+  { id: 12, name: "HVAC Works" },
+  { id: 13, name: "Flooring Works" },
+  { id: 14, name: "Upholstery Works" },
+  { id: 15, name: "CCTV and Security Works" },
+  { id: 16, name: "MEP Works" },
+  { id: 17, name: "Roofing Works" },
+  { id: 18, name: "Plumbing Works" },
+  { id: 19, name: "Electrical Works" },
+  { id: 20, name: "Insulation Works" },
+  { id: 21, name: "Glazing Works" },
+  { id: 22, name: "Tiling Works" },
+  { id: 23, name: "Landscaping Works" },
+  { id: 24, name: "Demolition Works" },
+  { id: 25, name: "Excavation Works" },
+  { id: 26, name: "Branding Works" },
+];
+
 const Vendors = () => {
   const [formData, setFormData] = useState({
     company_name: "",
@@ -106,16 +135,9 @@ const Vendors = () => {
       }
     } catch (error) {
       setIsLoading(false);
-      console.log(error);
-      if (error.response && error.response && error.response.errors) {
-        const errorMessage = error.response.errors.email
-          ? error.response.errors.email[0]
-          : "Failed to submit form.";
-        toast.error(error.response.data.errors.eess);
-      } else {
-        // General error fallback
-        toast.error("Failed to submit form.");
-      }
+      // General error fallback
+      toast.error(error?.response?.data?.message);
+      return;
     }
   };
 
@@ -174,32 +196,11 @@ const Vendors = () => {
                     <option value="" disabled>
                       Select Option
                     </option>
-                    <option value="1">Masonry Works</option>
-                    <option value="2">Carpentry Works</option>
-                    <option value="3">Steel Works</option>
-                    <option value="4">Mental Works</option>
-                    <option value="5">Aluminium Works</option>
-                    <option value="6">Wood Works</option>
-                    <option value="7">Painting and Sculpture</option>
-                    <option value="8">Screeding Works</option>
-                    <option value="9">Partition Works</option>
-                    <option value="10">⁠Drywall Works</option>
-                    <option value="11">Glass Works</option>
-                    <option value="12">HVAC Works</option>
-                    <option value="13">Flooring Works</option>
-                    <option value="14">Upholstery Works</option>
-                    <option value="15">CCTV and Security Works</option>
-                    <option value="16">MEP Works</option>
-                    <option value="17">Roofing Works</option>
-                    <option value="18">Plumbing Works</option>
-                    <option value="19">Electrical Works</option>
-                    <option value="20">Insulation Works</option>
-                    <option value="21">Glazing Works</option>
-                    <option value="22">Tiling Works</option>
-                    <option value="23">Landscaping Works</option>
-                    <option value="24">Demolition Works</option>
-                    <option value="25">Excavation Works</option>
-                    <option value="26">⁠Branding works</option>
+                    {sectors.map((sector) => (
+                      <option key={sector.id} value={sector.name}>
+                        {sector.name}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -296,4 +297,3 @@ const Vendors = () => {
 };
 
 export default Vendors;
-

@@ -15,7 +15,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     message: "",
-    phone_number: "",
+    email: "",
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,14 +28,14 @@ const Contact = () => {
   };
 
   const submitMessage = async () => {
-    const { name, message, phone_number } = formData;
-    if (!name || !message || !phone_number) {
+    const { name, message, email } = formData;
+    if (!name || !message || !email) {
       toast.warning("All fields are required");
       return;
     }
     setIsLoading(true);
     const dataSubmitted = {
-        name, message, phone_number
+        name, message, email
     }
     try {
       const { data } = await createMessage(dataSubmitted);
@@ -44,7 +44,7 @@ const Contact = () => {
         setFormData({
           name: "",
           message: "",
-          phone_number: "",
+          email: "",
         });
         setIsLoading(false);
         return;
@@ -103,8 +103,8 @@ const Contact = () => {
                   class="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  name="phone_number"
-                  value={formData.phone_number}
+                  name="email"
+                  value={formData.email}
                   onChange={handleChange}
                 />
               </div>
