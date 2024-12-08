@@ -26,7 +26,8 @@ const Portfoliopanel = () => {
       setIsLoading(true);
       const { data } = await getAllPortfolios();
       console.log(data.last_page);
-      setPortfolios(data.data);
+      const sortedData = data.data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+      setPortfolios(sortedData);
       setPaginationMeta({
         last_page: data.last_page,
         total: data.total,

@@ -38,11 +38,11 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/project" element={<Project />} />
+        <Route path="/project/:portfolioId" element={<Project />} />
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
-        <Route path="/jobdescription" element={<Jobdescription />} />
+        <Route path="/jobdescription/:careerId" element={<Jobdescription />} />
         <Route path="/notfound" element={<Notfound />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/postdetials/:blogId" element={<Postdetials />} />
@@ -65,10 +65,11 @@ function App() {
         <Route path="/careerspanel" element={<Careerspanel />} />
         <Route path="/newcareer" element={<Newcareer />} />
         <Route path="/newcareer/:careerId" element={<Newcareer />} />
-        <Route path="/candidate" element={<Candidate />} />
+        <Route path="/candidate/:id" element={<Candidate />} />
         <Route path="/messagepanel" element={<Messagepanel />} />
         <Route path="/preview" element={<Preview />} />
         <Route path="/addtestimonial" element={<Addtestimonial/>}/>
+        <Route path="/addtestimonial/:id" element={<Addtestimonial/>}/>
         <Route path="/addteam" element={<Addteam/>}/>
       </Routes>
       <ToastContainer position="top-center" />

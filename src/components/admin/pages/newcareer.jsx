@@ -30,7 +30,9 @@ const NewCareer = () => {
             job_title: data.job_title,
             body: data.body,
           });
-          setFeaturedImage(data.featured_image || null)
+          setFeaturedImage({
+            preview: data.featured_image
+          })
           setIsLoading(false);
         } catch (error) {
           setIsLoading(false);
@@ -49,7 +51,13 @@ const NewCareer = () => {
   const handleFileChange = (e) => {
     e.preventDefault();
     const file = e.target.files[0];
-    setFeaturedImage(file);
+    if(file) {
+      const newFile = {
+        file: file,
+        preview: URL.createObjectURL(file)
+      }
+      setFeaturedImage(newFile);
+    }
   };
 
   const handleInputChange = (e) => {
@@ -79,8 +87,8 @@ const NewCareer = () => {
       form.append("body", formData.body);
 
       // Append the document file if available
-      if (featuredImage && featuredImage instanceof File) {
-        form.append("featured_image", featuredImage, featuredImage.name); // Include file name (optional)
+      if (featuredImage && featuredImage.file instanceof File) {
+        form.append("featured_image", featuredImage.file, featuredImage.file.name); // Include file name (optional)
       }
 
       // Make the API request
@@ -105,7 +113,6 @@ const NewCareer = () => {
       
     } catch (error) {
       setIsLoading(false);
-      console.log(error);
       if (error.response && error.response && error.response.errors) {
         const errorMessage = error.response.errors.email
           ? error.response.errors.email[0]
@@ -115,8 +122,6 @@ const NewCareer = () => {
         // General error fallback
         toast.error("Failed to submit form.");
       }
-
-      console.error("Error submitting form:", error);
     }
   };
 
@@ -152,11 +157,20 @@ const NewCareer = () => {
 
                 <p className="admin-sub-header-title">Featured Image</p>
                 <div className="card-upload">
-                  <img
-                    src={cloudup}
+                  {
+                    featuredImage ? 
+                    <img
+                    src={featuredImage.preview}
                     className="img-fluid cloudup"
                     alt="cloudup"
-                  />
+                  /> :
+                  <img
+                  src={cloudup}
+                  className="img-fluid cloudup"
+                  alt="cloudup"
+                />
+                  }
+                  
                   <p className="label-title">
                     JPG, PNG or WebP. Less than 10MB
                   </p>
@@ -182,24 +196,6 @@ const NewCareer = () => {
                     style={{ display: "none" }}
                   />
                 </div>
-                {featuredImage && (
-                  <div className="flex">
-                    <p style={{ marginTop: "-20px" }}>
-                      {featuredImage.name}{" "}
-                      <span
-                        onClick={handleDelete}
-                        style={{
-                          color: "#FF4239",
-                          cursor: "pointer",
-                          marginLeft: "40px",
-                        }}
-                      >
-                        {" "}
-                        x{" "}
-                      </span>
-                    </p>
-                  </div>
-                )}
               </div>
             </div>
             <div className="col-lg-12">

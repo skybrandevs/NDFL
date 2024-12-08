@@ -9,19 +9,38 @@ import { toast } from "react-toastify";
 import ConfirmDeleteModal from "../partials/DeleteModal";
 import loads from "../../../images/loads.gif";
 import noimage from "../../../images/noimage.svg";
+import { getJobSubmissionEntries } from "../../../api/jobSubmission";
 
 const Careerspanel = () => {
   const [careers, setCareers] = useState([]);
+  const [jobSubmissions, setJobSubmissions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [careerToDelete, setCareerToDelete] = useState(null);
+  const [showJobModal, setShowJobModal] = useState(false);
+  const [jobEntryToDelete, setJobEntryToDelete] = useState(null);
+
 
   const fetchCareers = async () => {
     setIsLoading(true);
     try {
-      const response = await getAllCareers();
-      console.log(response.data);
-      setCareers(response.data);
+      const {data} = await getAllCareers();
+      // Sort the data by created_at in descending order (newest first)
+      const sortedData = data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+      setCareers(sortedData);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const fetchJobsubmission = async () => {
+    setIsLoading(true);
+    try {
+      const { data } = await getJobSubmissionEntries();
+      const sortedData = data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+      setJobSubmissions(sortedData);
     } catch (error) {
       console.log(error);
     } finally {
@@ -54,8 +73,23 @@ const Careerspanel = () => {
     setShowModal(false); // Close the modal without deleting
   };
 
+  const handleJobDeleteCancel = () => {
+    setShowJobModal(false); // Close the modal without deleting
+  };
+
+  const downloadDocument = (item) => {
+    toast.success("Downloading Job Resume", {
+      autoClose: 5,
+    });
+    const link = document.createElement("a");
+    link.href = item.resume_path;
+    link.download = `${item.full_name} Resume`; // Optional, name the document
+    link.click();
+  };
+
   useEffect(() => {
     fetchCareers();
+    fetchJobsubmission()
   }, []);
 
   return (
@@ -135,37 +169,27 @@ const Careerspanel = () => {
               <thead>
                 <tr>
                   <th scope="col">Name</th>
-                  <th scope="col">Phone number</th>
+                  <th scope="col">Email</th>
                   <th scope="col">Cv</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>John Doe</td>
-                  <td>0814538956094</td>
-                  <td>
-                    <img src={pdf} className="img-fluid pdf" alt="pdf" />
-                  </td>
-
-                  <td>
-                    <Link to="/candidate" className="link">
-                      <span className="v">View</span>
-                    </Link>
-                    <span className="d">Delete</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>John Doe</td>
-                  <td>0814538956094</td>
-                  <td>
-                    <img src={pdf} className="img-fluid pdf" alt="pdf" />
-                  </td>
-                  <td>
-                    <span className="v">View</span>
-                    <span className="d">Delete</span>
-                  </td>
-                </tr>
+                {jobSubmissions?.map((jobDetail, index) => (
+                     <tr key={index}>
+                     <td>{jobDetail.full_name}</td>
+                     <td>{jobDetail.email}</td>
+                     <td onClick={() => downloadDocument(jobDetail)} style={{cursor: "pointer"}}>
+                       <img src={pdf} className="img-fluid pdf" alt="pdf" />
+                     </td>
+   
+                     <td>
+                       <Link to={`/candidate/${jobDetail.id}`}className="link">
+                         <span className="v">View</span>
+                       </Link>
+                       {/* <span className="d">Delete</span> */}
+                     </td>
+                   </tr>
+                ))}
               </tbody>
             </table>
           </div>

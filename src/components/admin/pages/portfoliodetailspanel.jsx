@@ -216,7 +216,6 @@ const Portfoliodetailspanel = () => {
       setIsLoading(false);
     }
   };
-  console.log(selectedFiles);
 
   return (
     <div>

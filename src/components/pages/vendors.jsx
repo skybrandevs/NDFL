@@ -111,7 +111,7 @@ const Vendors = () => {
         const errorMessage = error.response.errors.email
           ? error.response.errors.email[0]
           : "Failed to submit form.";
-        toast.error(errorMessage);
+        toast.error(error.response.data.errors.eess);
       } else {
         // General error fallback
         toast.error("Failed to submit form.");

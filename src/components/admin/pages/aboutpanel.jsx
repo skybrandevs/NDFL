@@ -1,45 +1,43 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Nav from "../partials/nav";
 import cloudup from "../../../images/cloudup.svg";
 import add from "../../../images/add.svg";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { createSection, createTeamMembers } from "../../../api/about-us";
+import {
+  createSection,
+  createTeamMembers,
+  deleteSingleMember,
+  getAllTeamMembers,
+} from "../../../api/about-us";
 import loads from "../../../images/loads.gif";
-import kosie from '../../../images/kosie.png';
+import kosie from "../../../images/kosie.png";
 import { Link } from "react-router-dom";
+import ConfirmDeleteModal from "../partials/DeleteModal";
 
 const Aboutpanel = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    designation: "",
-  });
-  const [image, setImage] = useState(null);
   const [section1, setSection1] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [isSectionLoading, setIsSectionLoading] = useState(false);
-  const imgRef = useRef();
+  const [isLoading, setIsLoading] = useState(false);
+  const [allTeamMembers, setAllTeamMembers] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [memberToDelete, setMemberToDelete] = useState(null);
   const imgRef2 = useRef();
-  const navigation = useNavigate();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const newFile = {
-        file,
-        preview: URL.createObjectURL(file),
-      };
-      setImage(newFile);
+  const fetchTeamMembers = async () => {
+    try {
+      setIsLoading(true);
+      const { data } = await getAllTeamMembers();
+      setAllTeamMembers(data);
+      setIsLoading(false);
+    } catch (error) {
+      toast.error("Failed to load portfolios.");
+      setIsLoading(false);
     }
   };
+  useEffect(() => {
+    fetchTeamMembers();
+  }, []);
 
   const handleFileChange2 = (e) => {
     const file = e.target.files[0];
@@ -49,39 +47,6 @@ const Aboutpanel = () => {
         preview: URL.createObjectURL(file),
       };
       setSection1(newFile);
-    }
-  };
-
-  const handleCreateTeamMember = async () => {
-    const { name, designation } = formData;
-    if (!name || !designation) {
-      toast.error("Please fill in all required fields!");
-      return;
-    }
-    const form = new FormData();
-    form.append("name", formData.name);
-    form.append("designation", formData.designation);
-
-    if (image) {
-      form.append("image", image.file, image.file.name);
-    }
-
-    try {
-      setIsLoading(true);
-      let createResponse = await createTeamMembers(form);
-      if (createResponse.data.name) {
-        toast.success("Team Member created successfully!");
-        setIsLoading(false);
-        setFormData({
-          name: "",
-          designation: "",
-        });
-        setImage(null);
-        return;
-      }
-    } catch (error) {
-      toast.error("Failed to create team member!");
-      setIsLoading(false);
     }
   };
 
@@ -107,8 +72,38 @@ const Aboutpanel = () => {
     }
   };
 
+  const handleDeleteClick = (member) => {
+    setMemberToDelete(member);
+    setShowModal(true);
+  };
+
+  const handleDeleteConfirm = async () => {
+    // Call your delete function here with the vendorIdToDelete
+    try {
+      const response = await deleteSingleMember(memberToDelete?.id);
+      setShowModal(false);
+      fetchTeamMembers();
+      if (response.message) {
+        toast.success(`${memberToDelete.name} successsfully deleted`);
+      }
+    } catch (error) {
+      console.log("Error deleting Team member:", error);
+      toast.error("Failed to delete Team member!");
+    }
+  };
+
+  const handleDeleteCancel = () => {
+    setShowModal(false); // Close the modal without deleting
+  };
+
   return (
     <div>
+      <ConfirmDeleteModal
+        show={showModal}
+        onClose={handleDeleteCancel}
+        onConfirm={handleDeleteConfirm}
+        vendorName={memberToDelete?.name || "this member"}
+      />
       <div className="row">
         <div className="col-lg-2">
           <Nav></Nav>
@@ -125,7 +120,7 @@ const Aboutpanel = () => {
                     <>
                       <img
                         src={section1.preview}
-                        alt={formData.name}
+                        alt={`Image`}
                         className="img-fluid"
                       />
                     </>
@@ -158,13 +153,17 @@ const Aboutpanel = () => {
                   />
                 </div>
                 <button className="admin-save-2" onClick={handleCreateSection}>
-                {isSectionLoading ? (
-              <>
-                <img src={loads} className="img-fluid gif-loads" alt="loads" />{" "}
-              </>
-            ) : (
-              "Save"
-            )}
+                  {isSectionLoading ? (
+                    <>
+                      <img
+                        src={loads}
+                        className="img-fluid gif-loads"
+                        alt="loads"
+                      />{" "}
+                    </>
+                  ) : (
+                    "Save"
+                  )}
                 </button>
               </div>
             </div>
@@ -174,56 +173,45 @@ const Aboutpanel = () => {
             <h3 className="admin-header-title">Our team</h3>
 
             <div className="row">
-           <div className="col-lg-6">
-           <div className="fancy-card-admin">
-                        <div className="row">
-                          <div className="col-lg-6">
-<img src={kosie} className='img-fluid' alt='client-face'/>
-     </div>
+              {allTeamMembers?.map((member, index) => (
+                <div className="col-lg-6" key={index}>
+                  <div className="fancy-card-admin">
+                    <div className="row">
+                      <div className="col-lg-6">
+                        <img
+                          src={member?.image_path}
+                          className="img-fluid"
+                          alt="client-face"
+                        />
+                      </div>
 
-     <div className="col-lg-6">
-<h3>Kosie Okonkwo</h3>
-<Link to="/addteam" className='link'>
-<span className="edit">Edit</span>
-</Link>
- <span className="delete">Delete</span>
-     </div>
-
-     </div>
-    </div>
-           </div>
-
-           <div className="col-lg-6">
-           <div className="fancy-card-admin">
-                        <div className="row">
-                          <div className="col-lg-6">
-<img src={kosie} className='img-fluid' alt='client-face'/>
-     </div>
-
-     <div className="col-lg-6">
-<h3>Kosie Okonkwo</h3>
-<Link to="/addteam" className='link'>
-<span className="edit">Edit</span>
-</Link>
- <span className="delete">Delete</span>
-     </div>
-
-     </div>
-    </div>        
-           </div>
-           
-            
+                      <div className="col-lg-6">
+                        <h3>{member.name}</h3>
+                        <Link to="/addteam" className="link">
+                          <span className="edit">Edit</span>
+                        </Link>
+                        <span
+                          className="delete"
+                          onClick={() => handleDeleteClick(member)}
+                          style={{ cursor: "pointer" }}
+                        >
+                          Delete
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
               <div className="col-lg-11">
                 <Link to="/addteam" className="link">
-                <span className="flotter">
-                  <img src={add} className="img-fluid add" alt="add" />
-                  Add another
-                </span>
+                  <span className="flotter">
+                    <img src={add} className="img-fluid add" alt="add" />
+                    Add another
+                  </span>
                 </Link>
               </div>
             </div>
           </div>
-         
         </div>
       </div>
     </div>
