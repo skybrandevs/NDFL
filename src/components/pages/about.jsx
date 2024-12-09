@@ -59,7 +59,7 @@ const About = () => {
                     className="img-fluid about-hero"
                     alt="about-hero"
                   />
-                  <h3 className="about-header">Who are we</h3>
+                  <h3 className="about-header">Who are we test</h3>
                   <p className="about-sentence">
                     Founded in 2017 in Lagos, Neilz Design Fit-Out began as a
                     visionary endeavor by Emmanuel Obiajulu Ukah, a pioneer in
