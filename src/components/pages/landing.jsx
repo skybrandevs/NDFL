@@ -7,7 +7,7 @@ import Services from '../partials/services';
 import Testimonial from '../partials/testimonial';
 import Footer from '../partials/footer';
 
-const landing = () => {
+const Landing = () => {
   return (
 
     <div>
@@ -24,4 +24,4 @@ const landing = () => {
   )
 }
 
-export default landing;
+export default Landing;

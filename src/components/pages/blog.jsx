@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/partials/navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAllBlogPosts } from "../../api/blogs";
 import { toast } from "react-toastify";
 import { getAllTeamMembers } from "../../api/about-us";
@@ -15,6 +15,8 @@ const Blog = () => {
     last_page: 1,
     total: 0,
   });
+
+  const navigate = useNavigate()
 
   const fetchBlogPosts = async (page = 1) => {
     try {
@@ -73,7 +75,7 @@ const Blog = () => {
           <div className="row">
             <div className="col-lg-2"></div>
             <div className="col-lg-8">
-              <div className="wrapper-blog">
+              <div className="wrapper-blog" onClick={() => navigate(`/postdetials/${post?.id}`)} style={{cursor: "pointer"}}>
                <div className="overlay"></div>
                 <img
                   src={post?.featured_image}
@@ -84,7 +86,8 @@ const Blog = () => {
                   <p className="title-blog-post">{post?.title}</p>
                   <span>
                     <img
-                      src={post?.featured_image}
+                      src={allTeamMembers?.find((item) => item.name == post?.posted_by)?.image_path}
+                      
                       className="img-fluid auth-profile"
                      />
                      
@@ -115,7 +118,7 @@ const Blog = () => {
           <div className="col-lg-8">
             <h3 className="blog-component-header">Latest Post</h3>
             <div className="row">
-              {allBlogPosts?.map((blogPost, index) => {
+              {allBlogPosts?.slice(1).map((blogPost, index) => {
                 const author = allTeamMembers?.find((item) => item.name == blogPost.posted_by)
                 return (
                   <div className="col-lg-4 col-md-6" key={index}>
@@ -127,7 +130,7 @@ const Blog = () => {
                           alt="blog=hero"
                         />
                         <span className="tag-blog-main-component">
-                        {post?.category}
+                        {blogPost.category}
                         </span>
                         <p className="title-blog-post-main-component excerpt">
                          {blogPost.title}

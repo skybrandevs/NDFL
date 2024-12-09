@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { toast } from "react-toastify";
 import { getAllPortfolios } from "../../api/portfolio";
 import Pagination from "./PaginationComponent";
+import { useNavigate } from "react-router-dom";
 
 const Mansoryportfolio = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -14,6 +15,7 @@ const Mansoryportfolio = () => {
     last_page: 1,
     total: 0,
   });
+  const navigate = useNavigate()
 
   const fetchPortfolios = async (page = 1) => {
     try {
@@ -96,7 +98,7 @@ const Mansoryportfolio = () => {
                 >
                   <div className="row">
                     {filteredPortfolios.map((portfolio, index) => (
-                      <div className="col-lg-4 col-md-6 highlight" key={index}>
+                      <div className="col-lg-4 col-md-6 highlight" key={index} onClick={() => navigate(`/project/${portfolio.id}`)}>
                         <img
                           src={portfolio.featured_image}
                           className="img-fluid mansory-img"

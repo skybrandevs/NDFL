@@ -46,8 +46,6 @@ const fetchTeamMembers = async () => {
     fetchTeamMembers()
   }, [])
 
-  console.log(allTeamMembers)
-
   useEffect(() => {
     if (blogId) {
       const fetchBlogDetails = async () => {

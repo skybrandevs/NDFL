@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export const createVendor = async (formData) => {
+export const createJobSubmissionEntry = async (formData) => {
   try {
     const response = await axios.post(
-      `${process.env.REACT_APP_API_URL}/api/v1/vendors`,
+      `${process.env.REACT_APP_API_URL}/api/v1/job-submissions`,
       formData,
       {
         headers: {
@@ -14,15 +14,14 @@ export const createVendor = async (formData) => {
     );
     return response.data;
   } catch (error) {
-    throw error
     console.log(error);
   }
 };
 
-export const getAllVendors = async () => {
+export const getJobSubmissionEntries = async () => {
   try {
     const response = await axios.get(
-      `${process.env.REACT_APP_API_URL}/api/v1/vendors`,
+      `${process.env.REACT_APP_API_URL}/api/v1/job-submissions`,
       {
         headers: {
           Accept: "application/json",
@@ -36,27 +35,10 @@ export const getAllVendors = async () => {
   }
 };
 
-export const getSingleVendors = async (id) => {
+export const getSingleJobSubmissionEntry = async (id) => {
   try {
     const response = await axios.get(
-      `${process.env.REACT_APP_API_URL}/api/v1/vendors/${id}`,
-      {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const deleteSingleVendors = async (id) => {
-  try {
-    const response = await axios.delete(
-      `${process.env.REACT_APP_API_URL}/api/v1/vendors/${id}`,
+      `${process.env.REACT_APP_API_URL}/api/v1/job-submissions/${id}`,
       {
         headers: {
           Accept: "application/json",

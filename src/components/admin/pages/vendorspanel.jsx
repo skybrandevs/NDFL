@@ -18,7 +18,6 @@ const Vendorspanel = () => {
     setIsLoading(true);
     try {
       const response = await getAllVendors();
-      console.log(response);
       setAllVendors(response.data.data);
     } catch (error) {
       console.log(error);
@@ -96,7 +95,7 @@ const Vendorspanel = () => {
                             <h3 className="vendors-title">
                               {vendor.company_name}
                             </h3>
-                             <span className="vendors-work">Capentry</span> 
+                             <span className="vendors-work">{vendor.sector}</span> 
                             <div className="push-admin"></div>
                             <Link
                               to={`/vendorsdetailspanel/${vendor.id}`}
