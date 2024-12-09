@@ -61,7 +61,7 @@ const Services = () => {
 
           <div className="col-lg-5">
             <div className="pink ish">
-              <h3 className="h33">Architectural Designs</h3>
+              <h3 className="h33">Architectural Design</h3>
               <p className="p33">
                 Powerful spaces make a difference in our lives. These spaces are
                 where we come to work, learn, play, heal and live. We never lose
