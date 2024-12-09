@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../partials/navbar";
 import Footer from "../partials/footer";
-import abouthero from "../../images/abouthero.png";
-import emmanuel from "../../images/emmanuel.svg";
-import david from "../../images/david.png";
-import micheal from "../../images/micheal.png";
-import chidozie from "../../images/chidozie.svg";
-import kosi from "../../images/kosi.svg";
-import kiara from "../../images/kiara.svg";
-import lekan from "../../images/lekan.svg";
+import loads from "../../images/loads.gif";
 import { getAllTeamMembers, getSection } from "../../api/about-us";
 import { toast } from "react-toastify";
 
@@ -49,7 +42,11 @@ const About = () => {
     <div>
       <Navbar></Navbar>
       {isLoading ? (
-        <p style={{ color: "#fff" }}>Loading....</p>
+         <img
+         src={loads}
+         className="img-fluid gif-loads-pager"
+         alt="loads"
+       />
       ) : (
         <>
           <div className="bac-ndfl">

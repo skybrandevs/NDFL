@@ -12,8 +12,22 @@
 
 /**end **/
 
+.btn-ndfl-modal{
+  border: 1px solid #FF4239;
+  color:#FF4239;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+ background-color: transparent;
+  border-radius:8px;
+  padding: 10px 40px 10px 40px;
+  font-size: 14px;
+ }
+
+
 
 /**modal css admin **/
+
+
 
 .modal-content{
   background-color: #060606e1 !important;
@@ -53,20 +67,21 @@ display: none !important;
   background-color:black;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   transform: rotate(-3deg);
-  height:100%;
+  height:120%;
   padding-top:20px;
 }
 
 .scroll{
-width:45px;
+width:62px;
 margin-left:20px;
+margin-top:-5px;
 }
 
 .text-scroll{
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 22px;
   margin-left:20px;
 }
 
@@ -290,7 +305,7 @@ font-size:21px;
 
 
 .strip-background{
-  background-color: rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.076);
   height: 7vh;
   width:100%;
   margin-top:70px;
@@ -608,7 +623,7 @@ font-size: 14px;
   margin-right:25px;
   margin-top:18px;
   margin-bottom: 50px;
-}
+  }
 
 
 .copyrights{
@@ -1454,6 +1469,10 @@ margin-top:30px;
   font-weight: 400;
   margin-top:15px;
   margin-left:10px;
+  width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -1593,6 +1612,14 @@ margin-top:30px;
 .excerpt-admin{
   display:block;
   width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.excerpt-message{
+  display: block;
+  width: 386px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1796,6 +1823,32 @@ font-size:11px;
 
 
 /**admin css **/
+
+.em-border{
+  border: 1px solid #0a0a0a22;
+  width:10%;
+  border-radius: 5px;
+  height: fit-content;
+  padding: 10px 10px 10px 10px;
+  margin:20px 20px 20px 20px;
+}
+
+.client-logo{
+  display: block;
+  margin-left: auto;
+  margin-left: auto;
+  width:80px;
+}
+
+.remove-client-logo{
+  margin-left:10px;
+  color:red;
+  font-family: "Poppins", sans-serif;
+  font-size:14px;
+  font-weight:500;
+}
+
+
 .bacc{
   background-color: #ECECEC !important;
   height: fit-content !important;
@@ -2223,7 +2276,7 @@ font-size:14px;
     padding: 15px 15px 15px 15px !important;
     border: none !important;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
    }
 

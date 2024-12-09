@@ -134,13 +134,12 @@ const Careers = () => {
                       </div>
 
                       <div className="col-lg-2">
-                        <h6 className="exp-header">Experience</h6>
-                        <span className="exp-tag">1 Years</span>
+                        <h6 className="exp-header">Status</h6>
+                        <span className="exp-tag">Open</span>
                       </div>
 
                       <div className="col-lg-2">
-                        <h6 className="exp-header">Deadline</h6>
-                        <span className="exp-tag">30/08/2024</span>
+             
                       </div>
 
                       <div className="col-lg-2">

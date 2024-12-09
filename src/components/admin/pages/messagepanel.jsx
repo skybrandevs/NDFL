@@ -87,7 +87,7 @@ const Messagepanel = () => {
                   <tr key={index}>
                   <td>{message.name}</td>
                   <td>{message.email}</td>
-                  <td>{message.message}</td>
+                  <td className="excerpt-message">{message.message}</td>
 
                   <td>
                     <Link to={`/preview/${message.id}`} className="link">

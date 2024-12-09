@@ -52,7 +52,7 @@ const Preview = () => {
 
               <div className="row">
                 <div className="col-lg-12">
-                  <p className="admin-sub-header-title">Cover Letter</p>
+                  <p className="admin-sub-header-title">Message</p>
                   <div className="text-field-blog d-flex ps-3">
                     {message?.message}
                   </div>

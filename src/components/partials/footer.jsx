@@ -51,8 +51,9 @@ const footer = () => {
 <a href="https://www.facebook.com/neilzdesign" target='_blank' rel='noreferrer'><img src={fb} className='img-fluid io' alt='fb'/></a>
 <a href="https://x.com/home" target='_blank' rel='noreferrer'><img src={x} className='img-fluid io' alt='x'/></a>
 <a href='https://www.pinterest.com/neilzdesign/' target='_blank' rel="noreferrer"><img src={p} className='img-fluid io' alt='p'/></a>
-<img src={be} className='img-fluid io' alt='be'/>
-<img src={youtube} className='img-fluid io' alt='youtube'/>
+<a href='https://www.youtube.com/@neilzdesignfitout' target='_blank' rel="noreferrer"><img src={youtube} className='img-fluid io' alt='youtube'/></a>
+<a href='https://www.behance.net/NeilzdesignFitout' target='_blank' rel="noreferrer"><img src={be} className='img-fluid io' alt='be'/> </a>
+
 
 
         </div>

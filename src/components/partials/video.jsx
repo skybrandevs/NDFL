@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import videocover from "../../images/videocover.png";
 import { toast } from "react-toastify";
 import { getSection3 } from "../../api/home";
+import close from '../../images/close.svg';
 
 const Video = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -28,17 +29,37 @@ const Video = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
-            {/* implemenet a youtube video frame here */}
+            {/*Modal*/}
+
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      <div class="ratio ratio-4x3">
+  <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen frameborder="0" 
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-ndfl-modal" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{/*end*/}
+
+<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img
               src={videocover}
               className="img-fluid videocover"
-              alt="cover"
-            />
+              alt="cover"/></a>
           </div>
+
+
 
           <div className="col-lg-6 mrg-top">
             <div className="adjuster-gen">
-              <h3 className="number plus">{section3?.years_of_experience}</h3>
+              <h3 className="number">{section3?.years_of_experience}+</h3>
               <span className="numbers-sentence">years of experience</span>
             </div>
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import Nav from "././../partials/nav";
 import cloudup from "../../../images/cloudup.svg";
-import kosie from "../../../images/kosie.png";
 import add from "../../../images/add.svg";
+import kosie from "../../../images/kosie.png";
+import noimage from "../../../images/noimage.svg";
 import { Link } from "react-router-dom";
+import betaglass from "../../../images/betaglass.png";
 import {
   createCEOQuote,
   createClientsImage,
@@ -281,7 +283,7 @@ const Home = () => {
             <p className="admin-sub-header-title">Images</p>
 
             <div className="row">
-              {Array.from({ length: 4 }).map((_, index) => {
+              {Array.from({ length: 1}).map((_, index) => {
                 const file = images[index];
                 return (
                   <div className="col-lg-3" key={index}>
@@ -483,11 +485,12 @@ const Home = () => {
             </button>
           </div>
 
+        
           <div className="card-admin-h">
-            <h3 className="admin-header-title">Some of our clients</h3>
+            <h3 className="admin-header-title">Add Clients</h3>
 
             <div className="row">
-              {Array.from({ length: 16 }).map((_, index) => {
+              {Array.from({ length: 1 }).map((_, index) => {
                 const file = selectedFiles[index];
                 return (
                   <div className="col-lg-3" key={index}>
@@ -546,6 +549,250 @@ const Home = () => {
               })}
             </div>
           </div>
+
+          <div className="card-admin-h">
+            <h3 className="admin-header-title">Hero Section</h3>
+            <div className="row">
+             
+                  <div className="col-lg-6">
+                    <div className="fancy-card-admin">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <img
+                            src={kosie}
+                            className="img-fluid"
+                            alt="client-face"
+                          />
+                        </div>
+
+                        <div className="col-lg-6">
+                          <Link to="" className="link">
+                            <span className="edit">Edit</span>
+                          </Link>
+                          <span className="delete">Delete</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-6">
+                    <div className="fancy-card-admin">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <img
+                            src={kosie}
+                            className="img-fluid"
+                            alt="client-face"
+                          />
+                        </div>
+
+                        <div className="col-lg-6">
+                          <Link to="" className="link">
+                            <span className="edit">Edit</span>
+                          </Link>
+                          <span className="delete">Delete</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div className="col-lg-6">
+                    <div className="fancy-card-admin">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <img
+                            src={kosie}
+                            className="img-fluid"
+                            alt="client-face"
+                          />
+                        </div>
+
+                        <div className="col-lg-6">
+                          <Link to="" className="link">
+                            <span className="edit">Edit</span>
+                          </Link>
+                          <span className="delete">Delete</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div className="col-lg-6">
+                    <div className="fancy-card-admin">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <img
+                            src={kosie}
+                            className="img-fluid"
+                            alt="client-face"
+                          />
+                        </div>
+
+                        <div className="col-lg-6">
+                          <Link to="" className="link">
+                            <span className="edit">Edit</span>
+                          </Link>
+                          <span className="delete">Delete</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+           
+
+              <div className="row">
+                <div className="col-lg-11 add-mr-top">
+                  <Link to="/addtestimonial" className="link">
+                    <span className="flotter">
+                      <img src={add} className="img-fluid add-2" alt="add" />
+                      Add another
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="card-admin-h">
+            <h3 className="admin-header-title">Ceo Quote</h3>
+            <div className="row">
+             
+                  <div className="col-lg-6">
+                    <div className="fancy-card-admin">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <img
+                            src={kosie}
+                            className="img-fluid"
+                            alt="client-face"
+                          />
+                        </div>
+
+                        <div className="col-lg-6">
+                        <h3>Quote here</h3>
+                        <p>subtext here</p>
+                       <Link  className="link">
+                            <span className="edit">Edit</span>
+                          </Link>
+                          <span className="delete">Delete</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             
+              <div className="row">
+                <div className="col-lg-11 add-mr-top">
+                  <Link to="/addtestimonial" className="link">
+                    <span className="flotter">
+                      <img src={add} className="img-fluid add-2" alt="add" />
+                      Write Quote
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-admin-h">
+            <h3 className="admin-header-title">Section 3</h3>
+            <div className="row">
+             
+                  <div className="col-lg-6">
+                    <div className="fancy-card-admin">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <img
+                            src={noimage}
+                            className="img-fluid"
+                            alt="client-face"
+                          />
+                        </div>
+
+                        <div className="col-lg-6">
+                     <p>yrs of Exp. : 10</p>
+                     <p>Completed Projects : 10</p>
+                     <p>Satisfied Clients : 10</p>
+                       <Link  className="link">
+                            <span className="edit">Edit</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             
+              <div className="row">
+                <div className="col-lg-11 add-mr-top">
+                  <Link to="/addtestimonial" className="link">
+                    <span className="flotter">
+                      <img src={add} className="img-fluid add-2" alt="add" />
+                      Manage
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="card-admin-h">
+            <h3 className="admin-header-title">list of clients</h3>
+           <div className="row">
+<div className="col-lg-3 em-border">
+  <img src={betaglass} className="img-fluid client-logo" alt="client-logo"/>
+  <span className="remove-client-logo">Remove</span>
+</div>
+
+<div className="col-lg-3 em-border">
+  <img src={betaglass} className="img-fluid client-logo" alt="client-logo"/>
+  <span className="remove-client-logo">Remove</span>
+</div>
+
+<div className="col-lg-3 em-border">
+  <img src={betaglass} className="img-fluid client-logo" alt="client-logo"/>
+  <span className="remove-client-logo">Remove</span>
+</div>
+
+<div className="col-lg-3 em-border">
+  <img src={betaglass} className="img-fluid client-logo" alt="client-logo"/>
+  <span className="remove-client-logo">Remove</span>
+</div>
+
+<div className="col-lg-3 em-border">
+  <img src={betaglass} className="img-fluid client-logo" alt="client-logo"/>
+  <span className="remove-client-logo">Remove</span>
+</div>
+
+<div className="col-lg-3 em-border">
+  <img src={betaglass} className="img-fluid client-logo" alt="client-logo"/>
+  <span className="remove-client-logo">Remove</span>
+</div>
+
+<div className="col-lg-3 em-border">
+  <img src={betaglass} className="img-fluid client-logo" alt="client-logo"/>
+  <span className="remove-client-logo">Remove</span>
+</div>
+
+<div className="col-lg-3 em-border">
+  <img src={betaglass} className="img-fluid client-logo" alt="client-logo"/>
+  <span className="remove-client-logo">Remove</span>
+</div>
+
+</div>
+<div className="row">
+   <div className="col-lg-11 add-mr-top">
+    <Link to="/" className="link">
+     <span className="flotter">
+     <img src={add} className="img-fluid add-2" alt="add" />
+      Add another
+       </span>
+       </Link>
+       </div>
+      </div>
+</div>
+
+
 
           <div className="card-admin-h">
             <h3 className="admin-header-title">Testimonials</h3>
