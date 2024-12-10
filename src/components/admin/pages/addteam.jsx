@@ -3,10 +3,13 @@ import Nav from "../partials/nav";
 import backarrowadmin from "../../../images/backarrowadmin.svg";
 import cloudup from "../../../images/cloudup.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { createTeamMembers, getSingleTeamMember, updateTeamMember } from "../../../api/about-us";
+import {
+  createTeamMembers,
+  getSingleTeamMember,
+  updateTeamMember,
+} from "../../../api/about-us";
 import { toast } from "react-toastify";
 import loads from "../../../images/loads.gif";
-
 
 const Addteam = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +17,7 @@ const Addteam = () => {
     designation: "",
   });
   const [image, setImage] = useState(null);
-  const [memberData, setMemberData] = useState()
+  const [memberData, setMemberData] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [submitLoading, setSubmitLoading] = useState(false);
   const imgRef = useRef();
@@ -29,11 +32,11 @@ const Addteam = () => {
           const { data } = await getSingleTeamMember(id);
           setFormData({
             name: data?.name,
-            designation: data?.designation
+            designation: data?.designation,
           });
           setImage({
-            preview: data?.image_path
-          })
+            preview: data?.image_path,
+          });
           setIsLoading(false);
         } catch (error) {
           setIsLoading(false);
@@ -73,37 +76,34 @@ const Addteam = () => {
     form.append("name", formData.name);
     form.append("designation", formData.designation);
 
-    if (image &&  image.file instanceof File) {
+    if (image && image.file instanceof File) {
       form.append("image", image.file, image.file.name);
     }
 
     try {
       setSubmitLoading(true);
-      if(id && id !== undefined) {
-        const dataToSubmit = {
-          name, designation
+      if (id && id !== undefined) {
+        const { data } = await updateTeamMember(id, form);
+        if (data?.name) {
+          toast.success("Team Member updated successfully!");
+          setSubmitLoading(false);
+          navigation("/aboutpanel");
+          return;
         }
-        const {data} = await updateTeamMember(id, dataToSubmit)
-          if(data?.name) {
-            toast.success("Team Member updated successfully!");
-            setSubmitLoading(false);
-            navigation("/aboutpanel");
-            return;
-          }
       } else {
-      let {data} = await createTeamMembers(form);
-      if (data?.name) {
-        toast.success("Team Member created successfully!");
-        setSubmitLoading(false);
-        setFormData({
-          name: "",
-          designation: "",
-        });
-        setImage(null);
-        navigation("/aboutpanel");
-        return;
+        let { data } = await createTeamMembers(form);
+        if (data?.name) {
+          toast.success("Team Member created successfully!");
+          setSubmitLoading(false);
+          setFormData({
+            name: "",
+            designation: "",
+          });
+          setImage(null);
+          navigation("/aboutpanel");
+          return;
+        }
       }
-    }
     } catch (error) {
       toast.error("Failed to create team member!");
       setSubmitLoading(false);

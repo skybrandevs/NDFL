@@ -177,6 +177,25 @@ export const getSection3 = async () => {
   }
 };
 
+export const updateSingleSection = async (id, form) => {
+  try {
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/link-section/${id}`,
+      form,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
 export const createClientsImage = async (formData) => {
   try {
     const response = await axios.post(

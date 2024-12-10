@@ -38,6 +38,14 @@ const Video = () => {
     fetchSection3();
   }, []);
 
+  console.log(section3?.video_link, 44);
+
+  const videoLink = section3?.video_link;
+  const embedLink = videoLink?.includes("youtu.be/")
+  ? videoLink.replace("youtu.be/",  "www.youtube.com/embed/")
+  : videoLink?.includes("youtube.com/watch?v=")
+  ? videoLink.replace("youtube.com/watch?v=", "youtube.com/embed/")
+  : null
   return (
     <div className="videobackground">
       <div className="container">
@@ -56,11 +64,12 @@ const Video = () => {
                 <div class="modal-content">
                   <div class="modal-body">
                     <div class="ratio ratio-4x3">
+                    {/* "https:\/\/www.youtube.com */}
                       <iframe
-                        src={section3?.video_link}
+                        src={embedLink}
                         title="YouTube video"
-                        allowfullscreen
-                        frameborder="0"
+                        allowFullScreen
+                        frameBorder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                       ></iframe>
                     </div>

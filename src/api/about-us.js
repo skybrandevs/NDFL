@@ -108,13 +108,13 @@ export const deleteSingleMember = async (id) => {
 
 export const updateTeamMember = async (id, form) => {
   try {
-    const response = await axios.put(
+    const response = await axios.post(
       `${process.env.REACT_APP_API_URL}/api/v1/team-members/${id}`,
       form,
       {
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
         },
       }
     );

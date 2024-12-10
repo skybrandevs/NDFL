@@ -5,7 +5,11 @@ import backarrowadmin from "../../../images/backarrowadmin.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import cloudup from "../../../images/cloudup.svg";
 import loads from "../../../images/loads.gif";
-import { createSection3, getSection3 } from "../../../api/home";
+import {
+  createSection3,
+  getSection3,
+  updateSingleSection,
+} from "../../../api/home";
 
 const Linkspanel = () => {
   const [section3, setSection3] = useState({
@@ -17,7 +21,7 @@ const Linkspanel = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [sect3Loading, setSect3LoadingLoading] = useState(false);
   const { id } = useParams();
-const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleChangeSection = (e) => {
     const { name, value } = e.target;
     setSection3({ ...section3, [name]: value });
@@ -47,17 +51,26 @@ const navigate = useNavigate()
     };
     setSect3LoadingLoading(true);
     try {
-      const { data } = await createSection3(dataSubmitted);
-      if (data.satisfied_clients) {
-        toast.success(`Section 3 uploaded successfully!`);
-        setSect3LoadingLoading(false);
-        setSection3({
-          video_link: "",
-          years_of_experience: "",
-          completed_projects: "",
-          satisfied_clients: "",
-        });
-        navigate('/home')
+      if (id) {
+        const { data } = await updateSingleSection(id, dataSubmitted);
+        if (data.satisfied_clients) {
+          toast.success(`Section 3 updated successfully!`);
+          setSect3LoadingLoading(false);
+          navigate("/home");
+        }
+      } else {
+        const { data } = await createSection3(dataSubmitted);
+        if (data.satisfied_clients) {
+          toast.success(`Section 3 uploaded successfully!`);
+          setSect3LoadingLoading(false);
+          setSection3({
+            video_link: "",
+            years_of_experience: "",
+            completed_projects: "",
+            satisfied_clients: "",
+          });
+          navigate("/home");
+        }
       }
     } catch (error) {
       console.error("Error uploading image:", error);
@@ -68,22 +81,22 @@ const navigate = useNavigate()
 
   useEffect(() => {
     const fetchSection3 = async () => {
-        try {
-          setIsLoading(true);
-          const { data } = await getSection3();
-          const currentLink = data
-          setSection3({
-            video_link: currentLink?.video_link,
-            years_of_experience: currentLink?.years_of_experience,
-            completed_projects: currentLink?.completed_projects,
-            satisfied_clients: currentLink?.satisfied_clients,
-          });
-          setIsLoading(false);
-        } catch (error) {
-          toast.error("Failed to load link Data.");
-          setIsLoading(false);
-        }
-      };
+      try {
+        setIsLoading(true);
+        const { data } = await getSection3();
+        const currentLink = data;
+        setSection3({
+          video_link: currentLink?.video_link,
+          years_of_experience: currentLink?.years_of_experience,
+          completed_projects: currentLink?.completed_projects,
+          satisfied_clients: currentLink?.satisfied_clients,
+        });
+        setIsLoading(false);
+      } catch (error) {
+        toast.error("Failed to load link Data.");
+        setIsLoading(false);
+      }
+    };
     if (id) {
       fetchSection3();
     }
