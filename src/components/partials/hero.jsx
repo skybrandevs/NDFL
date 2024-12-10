@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-import style1 from "../../images/style1.png";
-import style2 from "../../images/style2.png";
-import style3 from "../../images/style3.png";
-import style4 from "../../images/style4.png";
 import functionmark from "../../images/functionmark.svg";
 import { Link } from "react-router-dom";
 import { getHeroImages } from "../../api/home";

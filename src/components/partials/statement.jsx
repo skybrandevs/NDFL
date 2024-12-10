@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import emmanuelukah from "../../images/emmanuelukah.png";
 import scroll from "../../images/scroll.svg";
 import { getCeoData } from "../../api/home";
 import { toast } from "react-toastify";
@@ -41,7 +40,6 @@ const Statement = () => {
             <img
               src={ceoData?.image_path}
               className="img-fluid ceo"
-              alt="emmanuelukah"
             />
           </div>
         </div>
