@@ -3,10 +3,24 @@ import videocover from "../../images/videocover.png";
 import { toast } from "react-toastify";
 import { getSection3 } from "../../api/home";
 import close from "../../images/close.svg";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 const Video = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [section3, setSection3] = useState();
+  const [startCounting, setStartCounting] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.5, // Trigger when 50% of the component is visible
+    triggerOnce: true, // Trigger the event only once
+  });
+
+  // Start counting when the component is in view
+  React.useEffect(() => {
+    if (inView) {
+      setStartCounting(true);
+    }
+  }, [inView]);
 
   const fetchSection3 = async () => {
     try {
@@ -76,17 +90,44 @@ const Video = () => {
 
           <div className="col-lg-6 mrg-top">
             <div className="adjuster-gen">
-              <h3 className="number">{section3?.years_of_experience}+</h3>
+              <h3 className="number" ref={ref}>
+                {startCounting ? (
+                  <>
+                    <CountUp
+                      start={0}
+                      end={section3?.years_of_experience}
+                      duration={3}
+                    />
+                    +{" "}
+                  </>
+                ) : (
+                  "+"
+                )}
+              </h3>
               <span className="numbers-sentence">years of experience</span>
             </div>
 
             <div className="adjuster-gen">
-              <h3 className="number">{section3?.completed_projects}+</h3>
+              <h3 className="number">
+                <CountUp
+                  start={0}
+                  end={section3?.completed_projects}
+                  duration={3}
+                />
+                +
+              </h3>
               <span className="numbers-sentence">completed projects.</span>
             </div>
 
             <div className="adjuster-gen">
-              <h3 className="number">{section3?.satisfied_clients}+</h3>
+              <h3 className="number">
+                <CountUp
+                  start={0}
+                  end={section3?.satisfied_clients}
+                  duration={3}
+                />
+                +
+              </h3>
               <span className="numbers-sentence">satisfied clients</span>
             </div>
           </div>

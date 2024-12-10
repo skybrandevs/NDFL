@@ -60,10 +60,7 @@ const Addtestimonial = () => {
     setSubmitLoader(true);
     try {
       if (id && id !== undefined) {
-        const { data } = await updateSingleTestimonial(id, {
-          name,
-          designation,
-        });
+        const { data } = await updateSingleTestimonial(id, form);
         if (data.name) {
           toast.success(`Testimony updated successfully!`);
           setSubmitLoader(false);

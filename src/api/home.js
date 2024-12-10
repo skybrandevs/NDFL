@@ -54,7 +54,7 @@ export const deleteSingleHeroImage = async (id) => {
 
 export const updateSingleHeroImage = async (id, form) => {
   try {
-    const response = await axios.put(
+    const response = await axios.post(
       `${process.env.REACT_APP_API_URL}/api/v1/hero-sections/${id}`,
       form,
       {
@@ -301,13 +301,13 @@ export const getSingleTestimonial = async (id) => {
 
 export const updateSingleTestimonial = async (id, form) => {
   try {
-    const response = await axios.put(
+    const response = await axios.post(
       `${process.env.REACT_APP_API_URL}/api/v1/testimonials/${id}`,
       form,
       {
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
         },
       }
     );
