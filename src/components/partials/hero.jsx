@@ -7,6 +7,8 @@ import functionmark from "../../images/functionmark.svg";
 import { Link } from "react-router-dom";
 import { getHeroImages } from "../../api/home";
 import { toast } from "react-toastify";
+import loads from "../../images/loads.gif";
+
 
 const Hero = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +33,7 @@ const Hero = () => {
   return (
     <div className="bac-ndfl">
       <div className="container">
-        { isLoading ? <p style={{textAlign: "center", color:"white"}}>Loading...</p> :
+        { isLoading ?  <img src={loads} className="img-fluid gif-loads-pager" alt="loads" /> :
           <div className="row">
           <div className="col-lg-12">
             <div className="box">

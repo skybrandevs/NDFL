@@ -39,7 +39,7 @@ const Testimonial = () => {
               >
                 <div class="carousel-inner">
                   {testimonials?.map((testimonial, index) => (
-                    <div class="carousel-item active trans" key={index}>
+                    <div className={`carousel-item ${index === 0 ? "active" : ""} trans`} key={index}>
                       <div className="container">
                         <div className="row">
                           <div className="col-lg-12">

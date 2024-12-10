@@ -35,11 +35,64 @@ export const getHeroImages = async () => {
   }
 };
 
+export const deleteSingleHeroImage = async (id) => {
+  try {
+    const response = await axios.delete(
+      `${process.env.REACT_APP_API_URL}/api/v1/hero-sections/${id}`,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateSingleHeroImage = async (id, form) => {
+  try {
+    const response = await axios.put(
+      `${process.env.REACT_APP_API_URL}/api/v1/hero-sections/${id}`,
+      form,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 
 export const createCEOQuote = async (formData) => {
   try {
     const response = await axios.post(
       `${process.env.REACT_APP_API_URL}/api/v1/ceo-quote`,
+      formData,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateCEOQuote = async (id, formData) => {
+  try {
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/ceo-quote/${id, formData}`,
       formData,
       {
         headers: {
@@ -70,6 +123,24 @@ export const getCeoData = async () => {
     console.log(error);
   }
 };
+
+export const deleteSingleCeoData = async (id) => {
+  try {
+    const response = await axios.delete(
+      `${process.env.REACT_APP_API_URL}/api/v1/hero-sections/${id}`,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 
 export const createSection3 = async (formData) => {
   try {
@@ -131,7 +202,42 @@ export const getClientsImage = async () => {
       {
         headers: {
           Accept: "application/json",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+export const updateClientsImage = async (id,formData) => {
+  try {
+    const response = await axios.put(
+      `${process.env.REACT_APP_API_URL}/api/v1/clients/${id}`,
+      formData,
+      {
+        headers: {
+          Accept: "application/json",
           "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteSingleClientImage = async (id) => {
+  try {
+    const response = await axios.delete(
+      `${process.env.REACT_APP_API_URL}/api/v1/clients/${id}`,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
       }
     );

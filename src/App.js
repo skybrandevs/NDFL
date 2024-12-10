@@ -29,6 +29,10 @@ import Addteam from "././components/admin/pages/addteam";
 import Preview from "././components/admin/pages/preview";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import HeroImagesPanel from "./components/admin/pages/heroImagesPanel";
+import CeoQuotePanel from "./components/admin/pages/ceoQuotePanel";
+import Linkspanel from "./components/admin/pages/linkspanel";
+import ClientPanel from "./components/admin/pages/clientPanel";
 
 
 function App() {
@@ -47,6 +51,14 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/postdetials/:blogId" element={<Postdetials />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/hero-images" element={<HeroImagesPanel />} />
+        <Route path="/hero-images/:id" element={<HeroImagesPanel />} />
+        <Route path="/ceo-quote" element={<CeoQuotePanel />} />
+        <Route path="/ceo-quote/:id" element={<CeoQuotePanel />} />
+        <Route path="/links" element={<Linkspanel />} />
+        <Route path="/links/:id" element={<Linkspanel />} />
+        <Route path="/client" element={<ClientPanel />} />
+        <Route path="/client/:id" element={<ClientPanel />} />
         <Route path="/aboutpanel" element={<Aboutpanel />} />
         <Route path="/portfoliopanel" element={<Portfoliopanel />} />
         <Route

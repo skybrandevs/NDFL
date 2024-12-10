@@ -158,28 +158,9 @@ const Jobdescription = () => {
               <div className="col-lg-1"></div>
               <div className="col-lg-10">
                 <h3 className="jd-title">{jobDetail?.job_title}</h3>
-                {/* <p className="jd-subtitle">Who Are We Looking For</p>
-                <ul>
-                  <li className="jd-list">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li className="jd-list">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li className="jd-list">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                </ul>
-
-                <p className="jd-subtitle">Educational Requirement</p>
                 <p className="jd-sentence">
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC, making it over 2000 years old. Richard McClintock,
-                  a Latin professor at Hampden-Sydney College in Virginia,
-                  looked up one of the more obscure Latin words, consectetur,
-                  from a Lorem Ipsum passage, and going
-                </p> */}
+                {jobDetail?.body}
+                </p>
               </div>
               <div className="col-lg-1"></div>
             </div>
