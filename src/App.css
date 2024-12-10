@@ -115,6 +115,15 @@ body{
   object-fit: cover !important;
 }
 
+.vendors-img-api-2{
+  border-radius:15px;
+  width:150px !important;
+  height:150px !important;
+  object-fit: cover !important;
+  margin-top:5px;
+  margin-left:-20px;
+}
+
 .no-img-api{
   border-radius:15px;
   width:100px !important;
@@ -753,8 +762,9 @@ font-size:40px;
 
 .testimonial-avatar{
   float:left;
-  width:75px;
+  width:50px;
   margin-top:25px;
+  border-radius:50px;
 }
 
 .client-name{
@@ -762,8 +772,8 @@ font-size:40px;
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   font-size:19px;
-  margin-left:95px;
-  margin-top:33px;
+  margin-left:80px;
+  margin-top:24px;
 }
 
 .client-position{
@@ -771,7 +781,7 @@ font-size:40px;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-size:16px;
-  margin-left:95px;
+  margin-left:80px;
   margin-top:-13px;
   }
 
@@ -785,12 +795,14 @@ margin-right:15px;
   .arrow-right{
     width:50px;
     margin-top:20px;
+    margin-right:80px;
 }
 
 .people{
-  width:270px;
+  width:50px;
+  border-radius:50px;
   margin-top:20px;
-  margin-left: 70px;
+  margin-left: -10px;
 }
 /**end **/
 
@@ -963,9 +975,10 @@ margin-right:15px;
 
 
    .profiles{
-    width:450px;
+    width:250px;
     margin-top:35px;
     margin-bottom:23px;
+    border-radius:15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1846,6 +1859,8 @@ font-size:11px;
   font-family: "Poppins", sans-serif;
   font-size:14px;
   font-weight:500;
+  background-color: transparent;
+  border: transparent;
 }
 
 
@@ -2142,6 +2157,22 @@ margin-right: auto;
   margin: 10px 10px 10px 0px;
 }
 
+.fancy-card-admin-ceo{
+  background-color: #F1F1F1;
+  border-radius: 20px;
+  width: 100%;
+  padding:5px 1px 1px 13px;
+  margin: 10px 10px 10px 0px;
+}
+
+.section-3{
+  margin-left:-110px;
+  margin-top:3px;
+  font-family: "Poppins", sans-serif;  
+  color: #000000;
+  font-weight:600;
+}
+
 .port-panel-header{
   font-family: "Poppins", sans-serif;  
   font-weight: 600;
@@ -2153,12 +2184,74 @@ margin-right: auto;
 }
 
 
+.member-name{
+  font-family: "Poppins", sans-serif;  
+  font-weight: 600;
+  color: #000000;
+  font-size: 16px;
+  margin-bottom:40px;
+  margin-left: -120px;
+  margin-top:5px;
+}
+
+
+.ceoquote{
+  font-family: "Poppins", sans-serif;  
+  font-weight: 600;
+  color: #000000;
+  font-size: 16px;
+  margin-bottom:5px;
+  margin-left: -110px;
+  margin-top:26px;
+}
+
+.ceo-sub-text{
+  font-family: "Poppins", sans-serif;  
+  font-weight:400; 
+  color: #000000;
+  font-size: 14px;
+  margin-left: -110px;
+  display:block;
+  width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.testimonial-sub-text{
+  font-family: "Poppins", sans-serif;  
+  font-weight:400; 
+  color: #000000;
+  font-size: 14px;
+  margin-left: -120px;
+  margin-top:15px;
+  display:block;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 .edit{
 color: #26A5C6;
 margin-left:35px;
 font-size:14px;
-
 }
+
+.edit-member{
+  color: #26A5C6;
+  margin-left:120px;
+  font-size:14px; 
+}
+
+.edit-modify{
+  color: #26A5C6;
+ float: right !important;
+  font-size:14px;
+  padding-right:25px !important;
+  margin-top:-35px;
+  }
 
 .delete{
 color: #FC2D5F;

@@ -83,14 +83,14 @@ const Testimonial = () => {
                               data-bs-target="#carouselExampleAutoplaying"
                               data-bs-slide="next"
                             />
-                            {/* {images.map((item, index) => (
+                             {images.map((item, index) => (
                             <img
                             src={item}
                             className="img-fluid people"
                             alt="people"
                             key={index}
                           />
-                           )) } */}
+                           )) }
                           </div>
                         </div>
                       </div>

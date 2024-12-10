@@ -111,7 +111,7 @@ const HeroImagesPanel = () => {
             </Link>
             <div className="card-admin-h">
               <h3 className="admin-header-title">Hero Section</h3>
-              <p className="admin-sub-header-title">Images</p>
+              <p className="admin-sub-header-title">Add image</p>
 
               <div className="row">
                 <div className="col-lg-3">

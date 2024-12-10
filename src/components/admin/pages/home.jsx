@@ -226,17 +226,17 @@ const Home = () => {
         ) : (
           <div className="col-lg-10 bacc">
             <div className="card-admin-h">
-              <h3 className="admin-header-title">Hero Section</h3>
+              <h3 className="admin-header-title">Hero Images</h3>
               <div className="row">
                 {allImages?.map((image, index) => (
-                  <div className="col-lg-6" key={index}>
+                  <div className="col-lg-4" key={index}>
                     <div className="fancy-card-admin">
                       <div className="row">
                         <div className="col-lg-6">
                           <img
                             src={image?.image_path}
-                            className="img-fluid"
-                            alt="client-face"
+                            className="img-fluid vendors-img-api"
+                            alt="Heroimage"
                           />
                         </div>
 
@@ -277,21 +277,21 @@ const Home = () => {
               <h3 className="admin-header-title">Ceo Quote</h3>
               <div className="row">
                 <div className="col-lg-6">
-                  <div className="fancy-card-admin">
+                  <div className="fancy-card-admin-ceo">
                     <div className="row">
                       <div className="col-lg-6">
                         <img
                           src={ceoData?.image_path}
-                          className="img-fluid"
+                          className="img-fluid vendors-img-api-2"
                           alt="client-face"
                         />
                       </div>
 
-                      <div className="col-lg-6">
-                        <h3>{ceoData?.quote}</h3>
-                        <p>{ceoData?.subtext}</p>
+                      <div className="col-lg-4">
+                        <h3 className="ceoquote excerpt-portfolio">{ceoData?.quote}</h3>
+                        <p className="ceo-sub-text">{ceoData?.subtext}</p>
                         <Link to={`/ceo-quote/${ceoData?.id}`} className="link">
-                          <span className="edit">Edit</span>
+                          <span className="edit-member">Edit</span>
                         </Link>
                         <span
                           className="delete"
@@ -327,25 +327,25 @@ const Home = () => {
                       <div className="col-lg-6">
                         <img
                           src={noimage}
-                          className="img-fluid"
+                          className="img-fluid vendors-img-api"
                           alt="client-face"
                         />
                       </div>
 
                       <div className="col-lg-6">
-                        <p>yrs of Exp. : {section3Data?.years_of_experience}</p>
-                        <p>
+                        <p className="section-3">Yrs of Exp:{section3Data?.years_of_experience}</p>
+                        <p className="section-3">
                           Completed Projects :{" "}
                           {section3Data?.completed_projects}
                         </p>
-                        <p>
+                        <p className="section-3">
                           Satisfied Clients : {section3Data?.satisfied_clients}
                         </p>
                         <Link
                           to={`/links/${section3Data?.id}`}
                           className="link"
                         >
-                          <span className="edit">Edit</span>
+                          <span className="edit-modify">Edit</span>
                         </Link>
                       </div>
                     </div>
@@ -375,7 +375,7 @@ const Home = () => {
                       className="img-fluid client-logo"
                       alt="client-logo"
                     />
-                    <span
+                    <button
                       className="remove-client-logo"
                       onClick={() => handleDeleteClient(client?.id)}
                     >
@@ -390,7 +390,7 @@ const Home = () => {
                       ) : (
                         "Remove"
                       )}
-                    </span>
+                    </button>
                   </div>
                 ))}
               </div>
@@ -417,18 +417,18 @@ const Home = () => {
                           <div className="col-lg-6">
                             <img
                               src={testimonial.image_path}
-                              className="img-fluid"
+                              className="img-fluid vendors-img-api"
                               alt="client-face"
                             />
                           </div>
 
                           <div className="col-lg-6">
-                            <p>{testimonial.quote}</p>
+                            <p className="testimonial-sub-text">{testimonial.quote}</p>
                             <Link
                               to={`/addtestimonial/${testimonial.id}`}
                               className="link"
                             >
-                              <span className="edit">Edit</span>
+                              <span className="edit-member">Edit</span>
                             </Link>
                             <span
                               className="delete"

@@ -180,15 +180,15 @@ const Aboutpanel = () => {
                       <div className="col-lg-6">
                         <img
                           src={member?.image_path}
-                          className="img-fluid"
+                          className="img-fluid vendors-img-api"
                           alt="client-face"
                         />
                       </div>
 
                       <div className="col-lg-6">
-                        <h3>{member.name}</h3>
+                        <h3 className="member-name">{member.name}</h3>
                         <Link to={`/addteam/${member.id}`} className="link">
-                          <span className="edit">Edit</span>
+                          <span className="edit-member">Edit</span>
                         </Link>
                         <span
                           className="delete"
