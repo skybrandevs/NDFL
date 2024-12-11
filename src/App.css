@@ -487,7 +487,7 @@ background-size: cover;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   text-align: center;
-  margin-top: 110px;
+  margin-top: 60px;
   margin-bottom: 70px;
   font-size: 48px; 
 }
@@ -495,7 +495,8 @@ background-size: cover;
 
 .qucoon{
   width:100px;
-  margin-right:50px;
+  margin-right:60px;
+  margin-bottom:75px;
 }
 
 .dsm{
@@ -985,116 +986,57 @@ margin-right:15px;
    }
 
 
-   .profiles-2{
-    width:300px;
-   margin-bottom:23px;
-   margin-top: 28px;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   }
-
-
-
-   .profiles-3{
-    width:312px;
-   margin-bottom:23px;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   
-   }
-
-
-   .profiles-4{
-    width:325px;
-    margin-left:25px;
-    margin-bottom:23px;
-   }
-
-   .profiles-5{
-    width:285px;
-    margin-left:25px;
-    margin-bottom:23px;
-   }
-
-   .profiles-6{
-    width:288px; 
-   }
-
-    .profiles-7{
-   width:288px;
-   margin-left:25px;
-   }
-
-
    .prof-name{
     font-family: "Poppins", sans-serif;
     color:#FFFFFF;
     font-size:24px;
-    margin-left:25px;
-   }
-
-   .prof-name-2{
-    font-family: "Poppins", sans-serif;
-    color:#FFFFFF;
-    font-size:24px;
-    margin-left:2px;
-    margin-top:20px;
-   }
-
-   .prof-name-3{
-    font-family: "Poppins", sans-serif;
-    color:#FFFFFF;
-    font-size:24px;
-    margin-left:25px;
-    margin-top:20px;
+    margin-left:50px;
    }
 
 
    .prof-designation{
     font-family: "Poppins", sans-serif;
     color: #FC2D5F;
-    margin-left:25px;
+    margin-left:50px;
    }
 
 
    .prof-designation-2{
     font-family: "Poppins", sans-serif;
     color:#26A5C6;
-    margin-left:25px;
+    margin-left:50px;
    }
 
    .prof-designation-3{
     font-family: "Poppins", sans-serif;
     color: #0CA784;
-    margin-left:25px;
+    margin-left:50px;
    }
 
    .prof-designation-4{
     font-family: "Poppins", sans-serif;
     color: #FF4239;
-    margin-left:25px;
+    margin-left:50px;
    }
 
 
    .prof-designation-5{
     font-family: "Poppins", sans-serif;
     color: #FC2D5F;
-    margin-left:25px;
+    margin-left:50px;
    }
 
 
    .prof-designation-6{
     font-family: "Poppins", sans-serif;
     color: #26A5C6;
-    margin-left:2px;
+    margin-left:50px;
    }
 
    .prof-designation-7{
     font-family: "Poppins", sans-serif;
     color: #0CA784;
-    margin-left:25px;
+    margin-left:50px;
    }
 
 /**end **/
@@ -1523,7 +1465,7 @@ margin-top:30px;
 .back-icon-2{
   float: left;
   width:50px;
-  margin-top:80px;
+  margin-top:60px;
   margin-bottom:-40px;
   margin-left:50px;
   margin-right:-70px;
@@ -1712,7 +1654,7 @@ font-weight: 300;
 }
 
 .author-name{
-  margin-left:20px;
+  margin-left:12px;
   color: white; 
   font-family: "Poppins", sans-serif;
   font-size:13px;
@@ -2414,6 +2356,30 @@ tr{
 /*** mobile media query **/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+
+
+  .diagonal-cut{
+    background-color:black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: rotate(-3deg);
+    height:130%;
+    padding-top:5px;
+  }
+
+  .scroll{
+    width:55px;
+    margin-left:20px;
+    margin-top:-5px;
+    }
+    
+    .text-scroll{
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      margin-left:20px;
+    }
+    
 
   .mansory-img{
    padding: 20px 20px 20px 20px !important;

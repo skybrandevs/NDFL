@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Nav from "././../partials/nav";
-import cloudup from "../../../images/cloudup.svg";
 import add from "../../../images/add.svg";
-import kosie from "../../../images/kosie.png";
 import noimage from "../../../images/noimage.svg";
 import { Link } from "react-router-dom";
-import betaglass from "../../../images/betaglass.png";
+
 import {
   createCEOQuote,
   createClientsImage,

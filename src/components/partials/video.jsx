@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import videocover from "../../images/videocover.png";
 import { toast } from "react-toastify";
 import { getSection3 } from "../../api/home";
-import close from "../../images/close.svg";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 

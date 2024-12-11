@@ -3,7 +3,6 @@ import Navbar from "../../components/partials/navbar";
 import Footer from "../../components/partials/footer";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import back from "../../images/back.svg";
-import jd from "../../images/jd.png";
 import { getSingleCareer } from "../../api/careers";
 import { toast } from "react-toastify";
 import loads from "../../images/loads.gif";
@@ -142,12 +141,13 @@ const Jobdescription = () => {
                       className="img-fluid back-icon-2"
                       alt="back"
                     />
-                  </Link>
+                
                   <img
                     src={jobDetail?.featured_image}
                     className="img-fluid jd"
                     alt="jd"
                   />
+                  </Link>
                 </div>
               </div>
             </div>

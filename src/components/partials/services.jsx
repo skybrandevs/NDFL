@@ -6,16 +6,6 @@ import consulting from "../../images/consulting.png";
 import facility from "../../images/facility.png";
 import edesign from "../../images/edesign.png";
 import officespace from "../../images/officespace.png";
-import qucoon from "../../images/qucoon.png";
-import dsm from "../../images/dsm.png";
-import welltec from "../../images/welltec.png";
-import betaglass from "../../images/betaglass.png";
-import bucch from "../../images/bucch.png";
-import churchgate from "../../images/churchgate.png";
-import creo from "../../images/creo.png";
-import cala from "../../images/cala.png";
-import tbo from "../../images/tbo.png";
-import powergas from "../../images/powergas.png";
 import { Link } from "react-router-dom";
 import { getClientsImage } from "../../api/home";
 import { toast } from "react-toastify";
@@ -270,11 +260,12 @@ const Services = () => {
               <img
                 src={image.image_path}
                 className="img-fluid qucoon"
-                alt="qucoon"
+                alt="logo"
                 key={index}
               />
             ))}
           </div>
+       
         </div>
       </div>
 

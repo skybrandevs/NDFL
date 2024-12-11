@@ -78,28 +78,28 @@ const Hero = () => {
                         <img
                           src={allImages?.[0]?.image_path}
                           className="img-fluid style1 zoom"
-                          alt="style1"
+                          alt="Empty slot 1"
                         />
                       </div>
                       <div className="col-lg-6">
                         <img
                           src={allImages?.[1]?.image_path}
                           className="img-fluid style2 zoom"
-                          alt="style2"
+                          alt="Empty slot 2"
                         />
                       </div>
                       <div className="col-lg-6">
                         <img
                           src={allImages?.[2]?.image_path}
                           className="img-fluid style3 zoom"
-                          alt="style3"
+                          alt="Empty slot 3"
                         />
                       </div>
                       <div className="col-lg-6">
                         <img
                           src={allImages?.[3]?.image_path}
                           className="img-fluid style4 zoom"
-                          alt="style4"
+                          alt="Empty slot 4"
                         />
                       </div>
                     </div>

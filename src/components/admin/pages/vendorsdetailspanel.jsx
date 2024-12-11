@@ -32,10 +32,11 @@ const Vendorsdetailspanel = () => {
     }
   }, [id]);
 
-
+{/*
   if (!singleVendor) {
     return <p>Vendor not found.</p>;
   }
+    */}
 
   const downloadDocument = () => {
     toast.success("Downloading CAC Document", {

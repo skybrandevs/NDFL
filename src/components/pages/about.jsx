@@ -323,10 +323,7 @@ const About = () => {
                       <div className="col-lg-4" key={index}>
                         <img
                           src={teamMember?.image_path}
-                          className={`img-fluid ${
-                            profile> 1 ? `profiles-${profile}` : "profiles"
-                          }`}
-                          alt="emmanuel"
+                          className="profiles img-fluid" alt="profiles"
                         />
                         <h3 className="prof-name">{teamMember?.name}</h3>
                         <p

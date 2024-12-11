@@ -103,7 +103,7 @@ const Project = () => {
                         className="img-fluid icon-tag"
                         alt="home"
                       />
-                      Interior Design
+                       {portfolio?.category}
                     </span>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ const Project = () => {
               <div className="col-lg-10">
                 <img
                   src={portfolio?.featured_image}
-                  className="img-fluid"
+                  className="img-fluid resize"
                   alt="churchreception"
                 />
                 <h3 className="project-sub-title">Project Description</h3>

@@ -3,7 +3,6 @@ import { toast } from "react-toastify";
 import Nav from "../partials/nav";
 import backarrowadmin from "../../../images/backarrowadmin.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import cloudup from "../../../images/cloudup.svg";
 import loads from "../../../images/loads.gif";
 import {
   createSection3,
