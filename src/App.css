@@ -2974,61 +2974,76 @@ margin-left:0px;
 
 
  .profiles{
-  width:300px;
+  width:280px;
   margin-top:35px;
   margin-bottom:23px;
-  margin-left:-5px !important;
- }
-
- .profiles-2 {
-  width:270px;
-  margin-left:20px !important;
- }
-
- .profiles-3{
-  width:280px;
-  margin-left:20px !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
  }
 
 
- .profiles-4{
-  width:280px;
-  margin-left:20px !important;
- }
-
- .profiles-5{
-  width:250px;
-  margin-left:20px !important;
- }
-
-
- .profiles-6{
-  width:250px;
-  margin-left:20px !important;
+ .prof-name{
+  font-family: "Poppins", sans-serif;
+  color:#FFFFFF;
+  font-size:20px;
+text-align: center !important;
+margin-left:-20px;
  }
 
 
+ .prof-designation{
+  font-family: "Poppins", sans-serif;
+  color: #FC2D5F;
+  text-align: center !important;
+  margin-left:-20px;
+ }
 
 
- .profiles-7{
-  width:250px !important;
-  margin-left:20px !important;
-  }
+ .prof-designation-2{
+  font-family: "Poppins", sans-serif;
+  color:#26A5C6;
+  text-align: center !important;
+  margin-left:-20px;
+ }
+
+ .prof-designation-3{
+  font-family: "Poppins", sans-serif;
+  color: #0CA784;
+  text-align: center !important;
+  margin-left:-20px;
+ }
+
+ .prof-designation-4{
+  font-family: "Poppins", sans-serif;
+  color: #FF4239;
+  text-align: center !important;
+  margin-left:-20px;
+ }
 
 
-  .prof-name-2{
-    font-family: "Poppins", sans-serif;
-    color:#FFFFFF;
-    font-size:24px;
-    margin-left:20px;
-    margin-top:20px;
-   }
+ .prof-designation-5{
+  font-family: "Poppins", sans-serif;
+  color: #FC2D5F;
+  text-align: center !important;
+  margin-left:-20px;
+ }
 
-   .prof-designation-6{
-    font-family: "Poppins", sans-serif;
-    color: #26A5C6;
-    margin-left:20px;
-   }
+
+ .prof-designation-6{
+  font-family: "Poppins", sans-serif;
+  color: #26A5C6;
+  text-align: center !important;
+  margin-left:-20px;
+ }
+
+ .prof-designation-7{
+  font-family: "Poppins", sans-serif;
+  color: #0CA784;
+  text-align: center !important;
+  margin-left:-20px;
+ }
+
 
 
    .vendors-header{
