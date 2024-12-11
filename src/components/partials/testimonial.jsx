@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import joke from "../../images/joke.svg";
 import arrowleft from "../../images/arrowleft.svg";
 import arrowright from "../../images/arrowright.svg";
-import people from "../../images/people.svg";
 import quote from "../../images/quote.svg";
 import { Link } from "react-router-dom";
 import { getTestimonials } from "../../api/home";

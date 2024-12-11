@@ -11,7 +11,6 @@ import {
   getAllTeamMembers,
 } from "../../../api/about-us";
 import loads from "../../../images/loads.gif";
-import kosie from "../../../images/kosie.png";
 import { Link } from "react-router-dom";
 import ConfirmDeleteModal from "../partials/DeleteModal";
 

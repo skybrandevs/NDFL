@@ -2358,6 +2358,63 @@ tr{
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
 
 
+  .back-button{
+    margin-top:70px;
+    margin-bottom: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    border: transparent;
+    background: transparent;
+    color: #FF4239;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration-line: none !important;
+   
+   }
+
+  .pback{
+    width:20px;
+    margin-left:10px;
+   
+  }
+
+
+  .span-setting{
+    margin-top:20px;
+    margin-bottom:40px;
+    padding-left:5px;
+    padding-right:0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   }
+  
+
+
+  .back-icon{
+    float: left;
+    width:40px;
+    margin-top:50px;
+    margin-left:25px;
+    margin-right:-70px;
+  }
+
+
+
+  .project-title{
+    text-align:left;
+    margin-left:25px;
+    margin-top:130px;
+    color: white;
+    font-size:18px;
+    font-family: "Poppins", sans-serif;
+    font-weight:600;
+  }
+
+
   .diagonal-cut{
     background-color:black;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -2383,6 +2440,7 @@ tr{
 
   .mansory-img{
    padding: 20px 20px 20px 20px !important;
+   margin-bottom:20px;
   }
   
   
@@ -2639,70 +2697,15 @@ tr{
 
 
 .qucoon{
-  width:100px;
+  width:80px;
   margin-left:30px !important;
   margin-top:-30px;
-}
-
-.dsm{
-  width:155px;
-  margin-left:160px !important;
-  margin-top:-80px;
+  display:inline;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
-.welltec{
-  width:100px;
-  margin-right:50px;
-  margin-left:30px !important;
-}
-
-
-.betaglass{
-  width:110px;
-  margin-right:50px;
-}
-
-.bucch{
-  width:100px;
-  margin-right:50px;
-  margin-left:30px !important;
-  margin-top:20px;
-}
-
-
-.churchgate{
-  width:100px;
-  margin-right:50px;
-  margin-top:20px;
-}
-
-.creo{
-  width:80px;
-  margin-left:50px !important;
-  margin-top:-125px;
-}
-
-.cala{
-  width:80px;
-  margin-right:50px;
-  margin-top:35px;
-
-  }
-
-.tbo{
-  width:100px;
-  margin-left:50px !important;
-  margin-top:-120px;
-
-}
-
-.powergas{
-  width:40px;
-  margin-left:10px !important;
-  margin-top:-130px;
- 
-}
 
 .bac-testimonial{
   background-color:#090909;
@@ -2729,7 +2732,7 @@ tr{
 
 .testimonial-avatar{
   float:left;
-  width:75px;
+  width:60px;
   margin-top:22px;
 }
 
@@ -2738,8 +2741,8 @@ tr{
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   font-size:18px;
-  margin-left:90px;
-  margin-top:33px;
+  margin-left:80px;
+  margin-top:25px;
 }
 
 .client-position{
@@ -2747,7 +2750,7 @@ tr{
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-size:14px;
-  margin-left:90px;
+  margin-left:80px;
   margin-top:-13px;
   }
 
@@ -2764,9 +2767,9 @@ margin-right:15px;
 }
 
 .people{
-  width:150px;
+  width:25px;
   margin-top:20px;
-  margin-left: 30px;
+  margin-left: -5px;
 }
 
 
@@ -3191,34 +3194,24 @@ margin-left:0px;
       .background-mansory{
         background-color:#080808;
         width:100%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding:5px 5px 5px 5px;
+        padding:1px 1px 1px 1px;
         margin-top:25px;
         margin-bottom: 40px;
       }
 
+      
       .push{
         margin-left:0px;
       }
 
-      #pills-all-tab{
-        margin-left: -4px;
-      }
+      /*
+      #pills-tab{
+     display:flexbox;
+    flex-wrap: nowrap;
+   }
+    */
 
-      #pills-commercial-tab{
-        margin-left: -4px;
-      }
-
-      #pills-residential-tab{
-        margin-left: -4px;
-      }
-
-      #pills-edesign-tab{
-        margin-left: -5px;
-      }
-
+  
 
       .back-icon-2{
         float: left;
@@ -3371,6 +3364,30 @@ margin-left:0px;
 
 /* Target devices with a max width of 1024px in landscape mode */
 @media only screen and (max-width: 1024px) and (orientation: landscape) {
+
+
+  .diagonal-cut{
+    background-color:black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: rotate(-3deg);
+    height:190%;
+    padding-top:2px;
+  }
+
+  .scroll{
+    width:50px;
+    margin-left:20px;
+    margin-top:-5px;
+    }
+    
+    .text-scroll{
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      margin-left:20px;
+    }
+    
 
 
 
@@ -3590,74 +3607,16 @@ margin-left:0px;
   
   
   .qucoon{
-    width:100px;
+    width:80px;
     margin-left:30px !important;
     margin-top:-30px;
-  }
-  
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
+    display:inline;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-130px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:-120px;
-  
-  }
-  
-  .powergas{
-    width:40px;
-    margin-left:10px !important;
-    margin-top:-130px;
-   
-  }
-  
+ 
   .bac-testimonial{
     background-color:#090909;
     margin-top:50px;
@@ -3683,7 +3642,7 @@ margin-left:0px;
   
   .testimonial-avatar{
     float:left;
-    width:75px;
+    width:55px;
     margin-top:22px;
   }
   
@@ -3692,8 +3651,8 @@ margin-left:0px;
     font-family: "Quicksand", sans-serif;
     font-weight: 700;
     font-size:18px;
-    margin-left:90px;
-    margin-top:33px;
+    margin-left:80px;
+    margin-top:25px;
   }
   
   .client-position{
@@ -3701,7 +3660,7 @@ margin-left:0px;
     font-family: "Quicksand", sans-serif;
     font-weight: 400;
     font-size:14px;
-    margin-left:90px;
+    margin-left:80px;
     margin-top:-13px;
     }
   
@@ -3718,9 +3677,9 @@ margin-left:0px;
   }
   
   .people{
-    width:150px;
+    width:40px;
     margin-top:20px;
-    margin-left: 30px;
+    margin-left: -5px;
   }
   
   
@@ -4333,6 +4292,28 @@ margin-left:0px;
 /* Target devices with a max width of 740px in landscape mode */
 @media only screen and (max-width: 740px) and (orientation: landscape) {
 
+  .diagonal-cut{
+    background-color:black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: rotate(-3deg);
+    height:190%;
+    padding-top:2px;
+  }
+
+  .scroll{
+    width:50px;
+    margin-left:20px;
+    margin-top:-5px;
+    }
+    
+    .text-scroll{
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      margin-left:20px;
+    }
+
 
    
   .qucoon{
@@ -4341,67 +4322,7 @@ margin-left:0px;
     margin-top:-30px;
   }
   
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:0px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:20px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:15px !important;
-    margin-top:10px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-left:3px;
-   margin-top:10px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:0px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:55px !important;
-    margin-right:25px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:70px !important;
-    margin-top:30px;
-  
-  }
-  
-  .powergas{
-    width:40px;
-    margin-left:10px !important;
-    margin-top:-130px;
-   }
+ 
 
 
    .push{
@@ -4447,6 +4368,40 @@ margin-left:0px;
 
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+
+
+  .qucoon{
+    width:80px;
+    margin-left:30px !important;
+    margin-top:-30px;
+    display:inline;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .diagonal-cut{
+    background-color:black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: rotate(-3deg);
+    height:190%;
+    padding-top:2px;
+  }
+
+  .scroll{
+    width:50px;
+    margin-left:20px;
+    margin-top:-5px;
+    }
+    
+    .text-scroll{
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      margin-left:20px;
+    }
+    
  
 
   .navbar-brand{
@@ -4670,68 +4625,8 @@ margin-left:0px;
     margin-top:-30px;
   }
   
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-130px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:-120px;
-  
-  }
-  
-  .powergas{
-    width:40px;
-    margin-left:10px !important;
-    margin-top:-130px;
-   
-  }
+ 
+
   
   .bac-testimonial{
     background-color:#090909;
@@ -4760,6 +4655,12 @@ margin-left:0px;
     float:left;
     width:75px;
     margin-top:22px;
+  }
+
+  .people{
+    width:45px;
+    margin-top:20px;
+    float: right;
   }
   
   .client-name{
@@ -4792,11 +4693,7 @@ margin-left:0px;
       margin-top:20px;
   }
   
-  .people{
-    width:150px;
-    margin-top:20px;
-    float: right;
-  }
+  
   
   
   .lets-talk{
@@ -5399,6 +5296,8 @@ margin-left:0px;
 
  @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
 
+
+
   .navbar-brand{
     width:50px;
     margin-left:15px;
@@ -5620,68 +5519,7 @@ margin-left:0px;
     margin-top:-30px;
   }
   
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-130px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:-120px;
-  
-  }
-  
-  .powergas{
-    width:40px;
-    margin-left:10px !important;
-    margin-top:-130px;
-   
-  }
+
   
   .bac-testimonial{
     background-color:#090909;
@@ -5708,7 +5546,7 @@ margin-left:0px;
   
   .testimonial-avatar{
     float:left;
-    width:75px;
+    width:55px;
     margin-top:22px;
   }
   
@@ -5717,8 +5555,8 @@ margin-left:0px;
     font-family: "Quicksand", sans-serif;
     font-weight: 700;
     font-size:18px;
-    margin-left:90px;
-    margin-top:33px;
+    margin-left:80px;
+    margin-top:25px;
   }
   
   .client-position{
@@ -5726,7 +5564,7 @@ margin-left:0px;
     font-family: "Quicksand", sans-serif;
     font-weight: 400;
     font-size:14px;
-    margin-left:90px;
+    margin-left:80px;
     margin-top:-13px;
     }
   
@@ -5743,7 +5581,7 @@ margin-left:0px;
   }
   
   .people{
-    width:150px;
+    width:45px;
     margin-top:20px;
     float: right;
   }
@@ -6427,7 +6265,14 @@ margin-left:0px;
 
 @media all and (device-width: 820px) and (device-height: 1180px) and (orientation:portrait) {
 
- 
+  .qucoon{
+    width:80px;
+    margin-left:30px !important;
+    margin-top:-30px;
+    display:inline;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .navbar-brand{
     width:50px;
@@ -6644,75 +6489,6 @@ margin-left:0px;
   
   
   
-  .qucoon{
-    width:100px;
-    margin-left:30px !important;
-    margin-top:-30px;
-  }
-  
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-130px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:-120px;
-  
-  }
-  
-  .powergas{
-    width:40px;
-    margin-left:10px !important;
-    margin-top:-130px;
-   
-  }
-  
   .bac-testimonial{
     background-color:#090909;
     margin-top:50px;
@@ -6741,7 +6517,12 @@ margin-left:0px;
     width:75px;
     margin-top:22px;
   }
-  
+
+  .people{
+    width:45px;
+    margin-top:20px;
+    float: right;
+  }
   .client-name{
     color: white;
     font-family: "Quicksand", sans-serif;
@@ -6772,12 +6553,7 @@ margin-left:0px;
       margin-top:20px;
   }
   
-  .people{
-    width:150px;
-    margin-top:20px;
-    float: right;
-  }
-  
+ 
   
   .lets-talk{
     text-align: center;
@@ -7599,68 +7375,8 @@ margin-left:0px;
     margin-top:-30px;
   }
   
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-130px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:-120px;
-  
-  }
-  
-  .powergas{
-    width:40px;
-    margin-left:10px !important;
-    margin-top:-130px;
-   
-  }
+ 
+
   
   .bac-testimonial{
     background-color:#090909;
@@ -7689,6 +7405,12 @@ margin-left:0px;
     float:left;
     width:75px;
     margin-top:22px;
+  }
+
+  .people{
+    width:45px;
+    margin-top:20px;
+    float: right;
   }
   
   .client-name{
@@ -7721,12 +7443,7 @@ margin-left:0px;
       margin-top:20px;
   }
   
-  .people{
-    width:150px;
-    margin-top:20px;
-    float: right;
-  }
-  
+ 
   
   .lets-talk{
     text-align: center;
@@ -8633,68 +8350,7 @@ margin-left:0px;
     margin-top:-30px;
   }
   
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-130px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:-120px;
-  
-  }
-  
-  .powergas{
-    width:40px;
-    margin-left:10px !important;
-    margin-top:-130px;
-   
-  }
+ 
   
   .bac-testimonial{
     background-color:#090909;
@@ -8723,6 +8379,12 @@ margin-left:0px;
     float:left;
     width:75px;
     margin-top:22px;
+  }
+
+  .people{
+    width:45px;
+    margin-top:20px;
+    float: right;
   }
   
   .client-name{
@@ -8755,11 +8417,7 @@ margin-left:0px;
       margin-top:20px;
   }
   
-  .people{
-    width:150px;
-    margin-top:20px;
-    float: right;
-  }
+  
   
   
   .lets-talk{
@@ -9660,68 +9318,6 @@ margin-left:0px;
     margin-top:-30px;
   }
   
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:30px;
-  
-  }
-  
-  .powergas{
-    width:35px;
-    margin-left:65px !important;
-    margin-top:25px;
-   
-  }
   
   .bac-testimonial{
     background-color:#090909;
@@ -9783,7 +9379,7 @@ margin-left:0px;
   }
   
   .people{
-    width:150px;
+    width:50px;
     margin-top:20px;
     float: right;
   }
@@ -10684,75 +10280,7 @@ margin-left:0px;
   }
   
   
-  
-  .qucoon{
-    width:100px;
-    margin-left:30px !important;
-    margin-top:-30px;
-  }
-  
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-130px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:-120px;
-  
-  }
-  
-  .powergas{
-    width:40px;
-    margin-left:10px !important;
-    margin-top:-130px;
-   
-  }
+
   
   .bac-testimonial{
     background-color:#090909;
@@ -10779,7 +10307,7 @@ margin-left:0px;
   
   .testimonial-avatar{
     float:left;
-    width:75px;
+    width:70px;
     margin-top:22px;
   }
   
@@ -10814,7 +10342,7 @@ margin-left:0px;
   }
   
   .people{
-    width:150px;
+    width:45px;
     margin-top:20px;
     float: right;
   }
@@ -11644,69 +11172,8 @@ margin-left:0px;
     margin-top:-30px;
   }
   
-  .dsm{
-    width:155px;
-    margin-left:0px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .welltec{
-    margin-top:-30px;
-    width:100px;
-    margin-right:50px;
-    margin-left:0px !important;
-  }
-  
-  
-  .betaglass{
-    width:110px;
-    margin-right:50px;
-    margin-top:-30px;
-  }
-  
-  .bucch{
-    width:100px;
-    margin-right:50px;
-    margin-left:30px !important;
-    margin-top:-30px;
-  }
-  
-  
-  .churchgate{
-    width:100px;
-    margin-right:50px;
-   margin-top:-130px;
-  }
-  
-  .creo{
-    width:80px;
-    margin-left:55px !important;
-    margin-top:-125px;
-  }
-  
-  .cala{
-    width:80px;
-    margin-left:20px !important;
-    margin-right:50px;
-    margin-top:35px;
-    
-}
-  
-  .tbo{
-    width:100px;
-    margin-left:50px !important;
-    margin-top:30px;
-  
-  }
-  
-  .powergas{
-    width:35px;
-    margin-left:65px !important;
-    margin-top:25px;
-   
-  }
-  
+ 
+ 
   .bac-testimonial{
     background-color:#090909;
     margin-top:50px;
@@ -11767,7 +11234,7 @@ margin-left:0px;
   }
   
   .people{
-    width:150px;
+    width:50px;
     margin-top:20px;
     float: right;
   }
